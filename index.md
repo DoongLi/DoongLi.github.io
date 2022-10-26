@@ -3,7 +3,7 @@ Currently I'm a Research Assistant in AMASLAB of [Southern University of Science
 
 > See my full [CV](todo) from my [Github](https://github.com/DoongLi).
 
-Best way to reach me is an email ：[lidong8421bcd@gmail.com](mailto:lid@mail.sustech.edu.cn).
+Best way to reach me is an email ：.
 
 ## Research
 
