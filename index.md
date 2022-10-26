@@ -14,4 +14,4 @@ I’m currently focused on：
 - multi-robot Collaborate Visual SLAM
 - higher-level scene understanding
 
-and  like most robotics researchers, my ultimate goal is to build robotic systems that can **understand** the environment like a human and **implement corresponding functions** . 
+and  like most robotics researchers, my ultimate goal is to build robotic systems that can **understand the environment like a human** and **implement corresponding functions** . 
