@@ -12,8 +12,8 @@ Best way to reach me is an email ：[lidong8421bcd@gmail.com](mailto:lid@mail.su
 
 I’m currently focused on：
 
-- Object SLAM
-- Active VSLAM, for example, how to make a robot build a perfect 3D map
+- Object SLAM，refer to this：https://github.com/DoongLi/awesome-object-SLAM
+- Active VSLAM, refer to this：https://github.com/DoongLi/Active-SLAM
 - multi-robot Collaborate Visual SLAM
 - higher-level scene understanding
 
