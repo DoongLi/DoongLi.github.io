@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "UMAD: University of Macau Anomaly Detection Benchmark Dataset"
+date:   2024-03-29 22:21:59 +00:00
+image: /images/2.jpeg
+categories: research
+author: "Dong Li"
+authors: "<strong>Dong Li</strong>, Lineng Chen, Cheng-zhong XU, Hui Kong"
+venue: "Submit to IROS 2024"
+website: https://doongli.github.io/umad
+paper: https://doongli.github.io/
+video: https://www.youtube.com/watch?v=xORb4H-AyNw
+Dataset&Code: https://github.com/IMRL/UMAD
+---
+
+A large-scale reference-based anomaly detection benchmark dataset that captures real-world scenarios. UMAD is applicable for both <strong>Change Detection</strong> and <strong>Anomaly Detection</strong> tasks.
