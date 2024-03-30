@@ -2,7 +2,7 @@
 layout: post
 title:  "Undergraduate Project"
 date:   2024-03-31 22:21:59 +00:00
-image: /images/project.png
+image: /images/2.png
 categories: project
 author: "Dong Li"
 authors: 
