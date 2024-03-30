@@ -114,12 +114,6 @@
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %}
-              {% if post.document %}
-              <a href="{{post.document}}">Document</a> /
-              {% endif %}
-              {% if post.github_repo %}
-              <a href="{{post.github}}">Github</a> /
-              {% endif %}
               <p></p>
               {{ post.excerpt }}
             </td>
@@ -157,11 +151,11 @@
               {{post.venue}}
               
               <br>
-              {% if post.document %}
-              <a href="{{post.document}}">Document</a> /
+              {% if post.paper %}
+              <a href="{{post.paper}}">Document</a> /
               {% endif %}
-              {% if post.github_repo %}
-              <a href="{{post.github}}">Github</a> /
+              {% if post.code %}
+              <a href="{{post.code}}">Github</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
