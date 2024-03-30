@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "UMAD: University of Macau Anomaly Detection Benchmark Dataset"
+title:  "Undergraduate Project, 2018-2022"
 date:   2024-03-29 22:21:59 +00:00
 image: /images/1.png
 categories: project
