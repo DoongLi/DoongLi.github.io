@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Undergraduate Project"
-date:   2024-03-31 22:21:59 +00:00
-image: /images/2.png
+title:  "UMAD: University of Macau Anomaly Detection Benchmark Dataset"
+date:   2024-03-29 22:21:59 +00:00
+image: /images/project.png
 categories: project
 author: "Dong Li"
-authors: 
-venue: "2018 to 2022"
-website: 
-paper: 
-video: 
-code:
+authors: "<strong>Dong Li</strong>, Lineng Chen, Cheng-Zhong Xu, Hui Kong"
+venue: "Submit to IROS"
+website: https://doongli.github.io/umad
+paper: https://doongli.github.io/
+video: https://www.youtube.com/watch?v=xORb4H-AyNw
+code: https://github.com/IMRL/UMAD
 ---
 
-During my undergraduate studies, I worked on several projects related to robotics and electronics, including <strong>Unmanned Surface Vehicle (USV)</strong>, <strong>Underwater Robot</strong>, Intelligent Sorting Trash Can, Automatic Tracking, Identification, and Measuring Device, <strong>SLAM-based Mobile Robot</strong>, and <strong>Robomaster Robots</strong>. For more information, please refer to the <strong>document</strong>.
+A large-scale reference-based anomaly detection benchmark dataset that captures real-world scenarios. <strong>UMAD</strong> is applicable for both <strong>Change Detection</strong> and <strong>Anomaly Detection</strong> tasks.
