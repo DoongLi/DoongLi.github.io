@@ -1,12 +1,16 @@
 ---
 layout: post
-title:  "Undergraduate Project"
-date:   2024-03-31 22:21:59 +00:00
-image: /images/1.png
-categories: project
+title:  "UMAD: University of Macau Anomaly Detection Benchmark Dataset"
+date:   2024-03-29 22:21:59 +00:00
+image: /images/2.png
+categories: research
 author: "Dong Li"
-authors: "<strong>Dong Li</strong>"
-venue: "2018-2022"
+authors: "<strong>Dong Li</strong>, Lineng Chen, Cheng-Zhong Xu, Hui Kong"
+venue: "Submit to IROS"
+website: https://doongli.github.io/umad
+paper: https://doongli.github.io/
+video: https://www.youtube.com/watch?v=xORb4H-AyNw
+code: https://github.com/IMRL/UMAD
 document: https://github.com/DoongLi/DoongLi.github.io/tree/main/doc/dongli-project.pdf
 ---
 
