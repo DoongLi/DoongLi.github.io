@@ -10,4 +10,4 @@ venue: "2018-2022"
 document: https://github.com/DoongLi/DoongLi.github.io/tree/main/doc/dongli-project.pdf
 ---
 
-During my undergraduate studies, I worked on several projects related to robotics and electronics, including <strong>Unmanned Surface Vehicle (USV)</strong>, <strong>Underwater Robot</strong>, <strong>Intelligent Sorting Trash Can, Automatic Tracking, Identification, and Measuring Device, <strong>SLAM-based Mobile Robot</strong>, and <strong>Robomaster Robots</strong>. For more information, please refer to the <strong>document</strong>.
+During my undergraduate studies, I worked on several projects related to robotics and electronics, including <strong>Unmanned Surface Vehicle (USV)</strong>, <strong>Underwater Robot</strong>, Intelligent Sorting Trash Can, Automatic Tracking, Identification, and Measuring Device, <strong>SLAM-based Mobile Robot</strong>, and <strong>Robomaster Robots</strong>. For more information, please refer to the <strong>document</strong>.
