@@ -145,17 +145,15 @@
             </td>
             <td style="padding:2.5%;width:70%;vertical-align:middle">
               <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
 
               <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              {{post.venue}}
               <br>
-              {% if post.paper %}
+              {% if post.document %}
               <a href="{{post.paper}}">paper</a> /
               {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
+              {% if post.github-repo %}
+              <a href="{{post.arxiv}}">Github Repository</a> /
               {% endif %}
               {% if post.video %}
               <a href="{{post.video}}">video</a> /
