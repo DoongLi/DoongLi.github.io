@@ -10,7 +10,7 @@ venue: "Submit to IROS"
 website: https://doongli.github.io/umad
 paper: https://doongli.github.io/
 video: https://www.youtube.com/watch?v=xORb4H-AyNw
-Dataset & Code: https://github.com/IMRL/UMAD
+code: https://github.com/IMRL/UMAD
 ---
 
 A large-scale reference-based anomaly detection benchmark dataset that captures real-world scenarios. <strong>UMAD</strong> is applicable for both <strong>Change Detection</strong> and <strong>Anomaly Detection</strong> tasks.
