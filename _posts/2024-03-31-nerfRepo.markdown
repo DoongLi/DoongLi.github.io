@@ -10,4 +10,4 @@ code: https://github.com/DoongLi/awesome-Implicit-NeRF-SLAM
 ---
 
 
-A comprehensive list of Implicit Representations, NeRF and 3D Gaussian Splatting papers relating to SLAM/Robotics domain, including papers, video, codes, and related websites.
+A comprehensive list of Implicit Representations, <strong>NeRF and 3D Gaussian Splatting papers relating to SLAM/Robotics domain</strong>, including papers, video, codes, and related websites.
