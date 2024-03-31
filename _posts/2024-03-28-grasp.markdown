@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Applications of Fiducial Markers in Robotic Grasping: A Comparison Between AprilTag and ArUco Markers"
-date:   2024-03-31 22:21:59 +00:00
+date:   2024-03-28 22:21:59 +00:00
 image: /images/4.png
 categories: project
 author: "Dong Li"
