@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GitHub Repository: <strong>awesome-Implicit-NeRF-SLAM</strong>"
+title:  "GitHub Repository: awesome-Implicit-NeRF-SLAM"
 date:   2024-03-31 22:21:59 +00:00
 image: /images/1.jpg
 categories: project
