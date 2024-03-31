@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "GitHub Repository: <strong>awesome-Implicit-NeRF-SLAM</strong>"
+date:   2024-03-31 22:21:59 +00:00
+image: /images/1.jpg
+categories: project
+author: "Dong Li"
+code: https://github.com/DoongLi/awesome-Implicit-NeRF-SLAM
+
+---
+
+
+A comprehensive list of Implicit Representations, NeRF and 3D Gaussian Splatting papers relating to SLAM/Robotics domain, including papers, video, codes, and related websites.
