@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GitHub Repository: awesome-Implicit-NeRF-SLAM"
-date:   2024-03-31 22:21:59 +00:00
+date:   2024-03-30 22:21:59 +00:00
 image: /images/3.png
 categories: project
 author: "Dong Li"
