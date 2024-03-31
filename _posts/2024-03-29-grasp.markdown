@@ -6,7 +6,7 @@ image: /images/4.png
 categories: project
 author: "Dong Li"
 authors: "Junling Wang, <strong>Dong Li</strong>"
-paper: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/The_Applications_of_Fiducial_Markers_in_Robotic_Grasping__A_Comparison_Between_AprilTag_and_ArUco_Markers .pdf
+paper: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/grasp.pdf
 
 ---
 
