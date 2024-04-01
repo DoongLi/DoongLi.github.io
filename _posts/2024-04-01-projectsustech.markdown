@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Some Robotics Projects at SUSTech, 2022-2023"
+date:   2024-04-01 22:21:59 +00:00
+image: /images/5.png
+categories: project
+author: "Dong Li"
+code: https://github.com/SUSTech-AMASLAB
+
+---
+
+During I as a Research Assistant at SUSTech, I developed various robotic platforms, including mobile robots and robotic arms. I utilized a range of sensors such as 2D/3D Lidar, depth cameras, millimeter-wave radar, and RFID, I implemented V-SLAM(ORB-SLAM, VINS, and RTAPMAP), Lidar-SLAM(Cartographer, LOAM/Lego-LOAM). I also developed a grasping system based on tags.
