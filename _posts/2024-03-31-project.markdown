@@ -2,7 +2,7 @@
 layout: post
 title:  "Undergraduate Project, 2018-2022"
 date:   2024-03-29 22:21:59 +00:00
-image: /images/1.png
+image: /images/5.png
 categories: project
 author: "Dong Li"
 paper: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/dongli-project.pdf
