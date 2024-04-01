@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Robotics Projects at SUSTech, 2022-2023"
-date:   2024-04-01 22:21:59 +00:00
+date:   2024-03-27 22:21:59 +00:00
 image: /images/3.png
 categories: project
 author: "Dong Li"
