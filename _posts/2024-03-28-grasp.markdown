@@ -6,7 +6,7 @@ image: /images/4.png
 categories: project
 author: "Dong Li"
 authors: "Junling Wang, <strong>Dong Li</strong>"
-paper: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/grasp.pdf
+paper: doc/grasp.pdf
 
 ---
 
