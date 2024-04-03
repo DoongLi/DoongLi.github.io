@@ -163,10 +163,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img class="rounded" src="./media/balf/teaser.png" >
+      <img class="rounded" src="./images/6.jpg" >
       <br><br><br>
       <h2 class="subtitle has-text-centered">
-      <strong>BALF</strong> is able to detect well localized and repeatable keypoints from both sharp and blurred images.
+      <strong>UMAD</strong> is a large-scale reference-based anomaly detection benchmark dataset that captures real-world scenarios. UMAD consists of 6 distinct scenes, 120 sequences, 26k image pairs, and a comprehensive set of 140k object annotation labels.
     </h2>
     <!-- <h2 class="subtitle has-text-centered">
       (The <span style="color:#000000;">black</span> / <span style="color:#ff0000;">red</span> lines are the ground truth / predicted camera trajectory)
@@ -177,6 +177,7 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
         <!-- Paper video. -->
@@ -185,8 +186,8 @@
             <hr>
             <h2 class="title is-3">Video</h2>
             <div class="publication-video">
-              <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=xORb4H-AyNw&t=1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-              <iframe src="https://www.youtube.com/watch?v=xORb4H-AyNw&t=1s"
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=xORb4H-AyNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <iframe src="https://www.youtube.com/watch?v=xORb4H-AyNw"
                       frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             
             </div>
@@ -202,10 +203,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <b>TL;DR: We present BALF, a simple yet both efficient and effective motion blur aware local feature detector.</b>
-          </p>
-          <p>
-            Local feature detection is a key ingredient of many image processing and computer vision applications, such as visual odometry and localization. Most existing algorithms focus on feature detection from a sharp image. They would thus have degraded performance once the image is blurred, which could happen easily under low-lighting conditions. To address this issue, we propose a simple yet both efficient and effective keypoint detection method that is able to accurately localize the salient keypoints in a blurred image. Our method takes advantages of a novel multi-layer perceptron (MLP) based architecture that significantly improve the detection repeatability for a blurred image. The network is also light-weight and able to run in real-time, which enables its deployment for time-constrained applications. Extensive experimental results demonstrate that our detector is able to improve the detection repeatability with blurred images, while keeping comparable performance as existing state-of-the-art detectors for sharp images.
+            In this paper, we propose <strong>UMAD</strong>, the first benchmark dataset for the anomaly detection with reference in the context of patrol robot scenes. To address the challenge of aligning the reference and query pairs, we propose an adaptive warping method, which allows for accurate comparison between the image pairs. Unlike anomaly detection without reference approaches that face difficulties in handling the diverse range of anomalies, anomaly detection with reference offers an alternative by leveraging the change detection between the reference and query image pairs. By utilizing the UMAD dataset, we have conducted evaluations of several state-of-the-art scene change detection methods to identify anomalies and establish a baseline performance. We intend that UMAD will facilitate the development of more effective anomaly detection with reference methods, thereby bridging the existing gap in this research domain.
+
           </p>
         </div>
       </div>
@@ -214,210 +213,19 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full_width">
-        <hr>
-        <h2 class="title is-3">Method</h2>
-        <br>
-        <div class="center-image">
-          <img src="media/balf/balf_overview.png" class="center" style="max-width: 100%; height: auto;"/>
-        </div>
-        <div class="content has-text-justified">
-          <br>  
-          <p>
-            <strong>The proposed network for motion blur aware local feature detector (BALF).</strong> Our network consists of two main modules: a multi-stage MLP-based encoder to extract an intermediate feature representation of the input image, and a MLP detection module to detect
-            salient keypoints via a differentiable softmax operator.
-          </p>
-        </div>
-        <p>
-          &nbsp
-        </p>
-        <p>
-          &nbsp
-        </p>
-        <p>
-          &nbsp
-        </p>
-        <div class="center-image">
-          <img src="media/balf/detection.png" class="center"/>
-        </div>
-        <div class="content has-text-justified">
-          <br>  
-          <p>
-            <strong>Detection module.</strong> The learned feature representations of the input image is processed by two channel-wise MLP blocks. The keypoints are then detected by using channel-wise softmax operation and mapped back to the original image domain.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full_width">
-        <hr>
-        <h2 class="title is-3">Quantitative Results</h2>
-      </div>
-    </div>
-
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-    <p>  
-    </p>
-
-    <div class="columns is-centered">
-      <!-- HPatches Dataset -->
-      <div class="column is-one-third is-offset-1">
-          <div class="content has-text-centered">
-              <h2 class="title is-5 has-text-centered">HPatches Dataset</h2>
-          </div>
-      </div>
-
-      <!-- Blur-HPatches Dataset -->
-      <div class="column is-two-thirds">
-          <div class="content has-text-centered">
-              <h2 class="title is-5 has-text-centered">Blur-HPatches Dataset</h2>
-          </div>
-      </div>
-    </div>
-    <p>
-      Our BALF achieves superior detection performance over prior works on motion blurred images, while keeping comparable performance for sharp images.
-    </p>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/HPatches_Sharp_Blur.png" class="center"/>
-    </div>
-
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-
-    <h3 class="title is-4">Blur-HPatches Dataset Preprocessed by Deblurring Network</h3>
-    <p>Single image deblurring network can indeed help with the local feature detection. However, it still cannot perform on-par with our one-stage detection network without doing any intermediate deblurring operation.</p>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Deblur-HPatches.png" class="center"/>
-    </div>
-
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-
-    <h3 class="title is-4">Efficiency</h3>
-    <p>Our BALF is
-      able to run in real-time (&tilde34.46 FPS) with a VGA resolution
-      image (<em>i.e.</em> 480&times640 pixels).</p>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Efficiency.png" class="center"/>
-    </div>
-
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full_width">
-        <hr>
-        <h2 class="title is-3">Qualitative Results</h2>
-      </div>
-    </div>
-
-    <h3 class="title is-4">RWBI Dataset</h3>
-    <p>Our BALF is able
-      to generate more accurate and consistent
-      keypoints in a blurred image.</p>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Detection_Qualitative_1.png" class="center"/>
-    </div>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Detection_Qualitative_2.png" class="center"/>
-    </div>
-
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-    <p>
-      &nbsp
-    </p>
-
-    <h3 class="title is-4">RealBlur Dataset</h3>
-    <p>Our BALF is able to detect well distributed and localized keypoints from both sharp and blurred images for further image matching.</p>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Matching_Qualitative_1.png" class="center"/>
-    </div>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Matching_Qualitative_2.png" class="center"/>
-    </div>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Matching_Qualitative_3.png" class="center"/>
-    </div>
-    <p>
-      &nbsp
-    </p>
-    <div class="center-image">
-      <img src="media/balf/Matching_Qualitative_4.png" class="center"/>
-    </div>
-
-  </div>
-</section>
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@InProceedings{Zhao_2024_WACV,
+    <pre><code>
+      <!--@InProceedings{Zhao_2024_WACV,
       author    = {Zhao, Zhenjun},
       title     = {BALF: Simple and Efficient Blur Aware Local Feature Detector},
       booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
       month     = {January},
       year      = {2024},
       pages     = {3362-3372}
+      </p> -->
+      TODO
   }</code></pre>
   </div>
 </section>
