@@ -3,46 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="UMAD: University of Macau Anomaly Detection Benchmark Dataset.">
-  <meta name="keywords" content="Anomaly Detection, Change Detection">
+        content="BALF: Simple and Efficient Blur Aware Local Feature Detector">
+  <meta name="keywords" content="BALF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UMAD: University of Macau Anomaly Detection Benchmark Dataset</title>
+  <title>BALF</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./media/balf/css/bulma.min.css">
+  <link rel="stylesheet" href="./media/balf/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./media/balf/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./media/balf/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./media/balf/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="./media/balf/js/fontawesome.all.min.js"></script>
+  <script src="./media/balf/js/bulma-carousel.min.js"></script>
+  <script src="./media/balf/js/bulma-slider.min.js"></script>
+  <script src="./media/balf/js/index.js"></script>
 </head>
 <body>
 
-<!--
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -53,7 +37,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://ericzzj1989.github.io/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,669 +47,385 @@
         <a class="navbar-link">
           More Research
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+        <!-- <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://pengsongyou.github.io/conv_onet">
+            ConvONet - ECCV 2020
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://pengsongyou.github.io/sap">
+            Shapt As Points - NeurIPS 2021
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
+        </div> -->
       </div>
     </div>
 
   </div>
 </nav>
--->
+
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
+        <!-- <div class="column is-7 has-text-centered">
+          <img src="media/nice-slam/nice-slam-logo2.png" alt="NICE-SLAM"/>
+        </div> -->
+      <!-- </div> -->
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"> <span style="color: #FF5733;">UMAD</span>: University of Macau Anomaly Detection Benchmark Dataset</h1>
+          <h1 class="title is-1 publication-title">BALF</h1>
+          <h1 class="title is-2 publication-title" style="white-space: nowrap;">Simple and Efficient Blur Aware Local Feature Detector</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-4">WACV 2024</h2>
+          </div>
+          <!-- <br> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://doongli.github.io">Dong Li</a>,</span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=en&user=Fg01Yv0AAAAJ">Lineng Chen</a>,</span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=XsBBTUgAAAAJ&hl=en">Cheng-Zhong Xu</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=Glqv2ooAAAAJ&hl=en&oi=ao">Hui Kong</a>,
-            </span>
+              <a href="https://ericzzj1989.github.io/">Zhenjun Zhao</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">University of Macau</span>
+          <div class="is-size-5 publication-author">
+            <span class="author-block">The Chinese University of Hong Kong</span>&nbsp;&nbsp;
           </div>
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2403.11024"
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2106.03452"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Arxiv</span>
-                </a>
-              </span>
-              
-              <!-- <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2211.14731" target="_blank"
+                   class="button is-normal is-rounded is-dark">
+                <!-- <a href="https://arxiv.org/abs/2112.12130" target="_blank"
+                   class="button is-normal is-rounded is-dark"> -->
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="media/balf/poster_balf.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-palette"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span>
               <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+              <span class="link-block">
+                <a href="https://youtu.be/pSn80SS9mTM?si=fJPbDiHtIMrqiqSV"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
+               <span class="link-block">
+                <a href="https://github.com/ericzzj1989/BALF" target="_blank"
+		   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span >Code (TODO)</span>
                   </a>
-              </span> -->
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
+              </span> 
             </div>
+
           </div>
         </div>
-      </div>
-      <div class="has-text-centered">
-        <video id="teaser" controls autoplay muted loop playsinline width="60%">
-          <source src="./static/videos/video.mp4"
-                  type="video/mp4">
-        </video>
       </div>
     </div>
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img class="rounded" src="./media/balf/teaser.png" >
+      <br><br><br>
+      <h2 class="subtitle has-text-centered">
+      <strong>BALF</strong> is able to detect well localized and repeatable keypoints from both sharp and blurred images.
+    </h2>
+    <!-- <h2 class="subtitle has-text-centered">
+      (The <span style="color:#000000;">black</span> / <span style="color:#ff0000;">red</span> lines are the ground truth / predicted camera trajectory)
+    </h2> -->
+    <!-- <h2 class="is-size-6 has-text-centered">(The <span style="color:#000000;">black</span> / <span style="color:#ff0000;">red</span> lines are the ground truth / predicted camera trajectory)</h2> -->
+    
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract Section -->
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <hr>
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/pSn80SS9mTM?si=iqCQeYO0QJYZ_o7u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <iframe src="https://www.youtube.com/embed/pSn80SS9mTM?si=iqCQeYO0QJYZ_o7u"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+      
+    <br>
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <hr>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Neural Radiance Field (NeRF), as an implicit 3D scene representation, 
-            lacks inherent ability to accommodate changes made to the initial static scene. 
-            If objects are reconfigured, 
-            it is difficult to update the NeRF to reflect the new state of the scene without time-consuming data re-capturing and NeRF re-training.
-            To address this limitation, 
-            we develop the first update method for NeRFs to physical changes.
-            Our method takes only sparse new images (e.g. 4) of the altered scene as extra inputs and update the pre-trained NeRF in around 1 to 2 minutes.
+            <b>TL;DR: We present BALF, a simple yet both efficient and effective motion blur aware local feature detector.</b>
           </p>
           <p>
-            Particularly, we develop a pipeline to identify scene changes and update the NeRF accordingly.
-            Our core idea is the use of a second helper NeRF to learn the local geometry and appearance changes,
-            which sidesteps the optimization difficulties in direct NeRF fine-tuning.
-            The interpolation power of the helper NeRF is the key to accurately reconstruct the un-occluded objects regions under sparse view supervision.
-            Our method imposes no constraints on NeRF pre-training, and requires no extra user input or explicit semantic priors.
-            It is an order of magnitude faster than re-training NeRF from scratch while maintaining on-par and even superior performance.
+            Local feature detection is a key ingredient of many image processing and computer vision applications, such as visual odometry and localization. Most existing algorithms focus on feature detection from a sharp image. They would thus have degraded performance once the image is blurred, which could happen easily under low-lighting conditions. To address this issue, we propose a simple yet both efficient and effective keypoint detection method that is able to accurately localize the salient keypoints in a blurred image. Our method takes advantages of a novel multi-layer perceptron (MLP) based architecture that significantly improve the detection repeatability for a blurred image. The network is also light-weight and able to run in real-time, which enables its deployment for time-constrained applications. Extensive experimental results demonstrate that our detector is able to improve the detection repeatability with blurred images, while keeping comparable performance as existing state-of-the-art detectors for sharp images.
           </p>
         </div>
       </div>
     </div>
-    
-    <!-- Figure Section -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <figure>
-          <img id="teaser" width="100%" src="./static/images/Figure1.png" alt="Teaser image showing the results of the NeRF update method.">
-          <figcaption style="text-align: justify;">
-            Figure 1: After training a NeRF for pieces on a Chinese chess board from hundreds of RGB images,
-            a player moves the "Pao" piece, highlighted by the red box, to a new position.
-            To accommodate this physical object reconfiguration,
-            we take 4 additional images for the changed scene,
-            and use our method to estimate scene changes and quickly update the pre-trained NeRF with the guidance of the 4 images.
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <!-- Additional sections can be added here following the same structure -->
-
+    <!--/ Abstract. -->
   </div>
 </section>
-
-
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <!--/ Results. -->
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-centered">
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Chess_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Chess_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Chess_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Shoe_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pre-trained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Shoe_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Shoe_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Liar_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Liar_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Liar_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Bunny_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Bunny_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Bunny_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Soda_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Soda_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Soda_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Cube_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Cube_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Cube_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Cone_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pre-trained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Cone_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Cone_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Re-trained NeRF
-              </div>
-            </div>
-          </div>
-          <!-- Example. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Method</h2>
+        <br>
+        <div class="center-image">
+          <img src="media/balf/balf_overview.png" class="center" style="max-width: 100%; height: auto;"/>
+        </div>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            <strong>The proposed network for motion blur aware local feature detector (BALF).</strong> Our network consists of two main modules: a multi-stage MLP-based encoder to extract an intermediate feature representation of the input image, and a MLP detection module to detect
+            salient keypoints via a differentiable softmax operator.
+          </p>
+        </div>
+        <p>
+          &nbsp
+        </p>
+        <p>
+          &nbsp
+        </p>
+        <p>
+          &nbsp
+        </p>
+        <div class="center-image">
+          <img src="media/balf/detection.png" class="center"/>
+        </div>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            <strong>Detection module.</strong> The learned feature representations of the input image is processed by two channel-wise MLP blocks. The keypoints are then detected by using channel-wise softmax operation and mapped back to the original image domain.
+          </p>
+        </div>
+      </div>
+    </div>
 
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Sphere_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Sphere_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Sphere_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Quantitative Results</h2>
+      </div>
+    </div>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>  
+    </p>
+
+    <div class="columns is-centered">
+      <!-- HPatches Dataset -->
+      <div class="column is-one-third is-offset-1">
+          <div class="content has-text-centered">
+              <h2 class="title is-5 has-text-centered">HPatches Dataset</h2>
           </div>
-          <!-- Example. -->
-          <div class="columns is-centered">
-            <div class="column">
-              <video id="replay-video"
-                       autoplay
-                       controls
-                       loop
-                       muted
-                       preload
-                       playsinline
-                       width="100%">
-                  <source src="./static/videos/results/23.11.25_Cylinder_pretrain.mp4"
-                          type="video/mp4">
-              </video>
-              <div class="column">
-                Pretrained NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Cylinder_Ours.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Updated NeRF
-              </div>
-            </div>
-            <div class="column">
-              <video id="replay-video"
-                     autoplay
-                     controls
-                     loop
-                     muted
-                     preload
-                     playsinline
-                     width="100%">
-                <source src="./static/videos/results/23.11.25_Cylinder_retrain.mp4"
-                        type="video/mp4">
-              </video>
-              <div class="column">
-                Retrained NeRF
-              </div>
-            </div>
+      </div>
+
+      <!-- Blur-HPatches Dataset -->
+      <div class="column is-two-thirds">
+          <div class="content has-text-centered">
+              <h2 class="title is-5 has-text-centered">Blur-HPatches Dataset</h2>
           </div>
       </div>
     </div>
+    <p>
+      Our BALF achieves superior detection performance over prior works on motion blurred images, while keeping comparable performance for sharp images.
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/HPatches_Sharp_Blur.png" class="center"/>
+    </div>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+
+    <h3 class="title is-4">Blur-HPatches Dataset Preprocessed by Deblurring Network</h3>
+    <p>Single image deblurring network can indeed help with the local feature detection. However, it still cannot perform on-par with our one-stage detection network without doing any intermediate deblurring operation.</p>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Deblur-HPatches.png" class="center"/>
+    </div>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+
+    <h3 class="title is-4">Efficiency</h3>
+    <p>Our BALF is
+      able to run in real-time (&tilde34.46 FPS) with a VGA resolution
+      image (<em>i.e.</em> 480&times640 pixels).</p>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Efficiency.png" class="center"/>
+    </div>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Qualitative Results</h2>
+      </div>
+    </div>
+
+    <h3 class="title is-4">RWBI Dataset</h3>
+    <p>Our BALF is able
+      to generate more accurate and consistent
+      keypoints in a blurred image.</p>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Detection_Qualitative_1.png" class="center"/>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Detection_Qualitative_2.png" class="center"/>
+    </div>
+
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+    <p>
+      &nbsp
+    </p>
+
+    <h3 class="title is-4">RealBlur Dataset</h3>
+    <p>Our BALF is able to detect well distributed and localized keypoints from both sharp and blurred images for further image matching.</p>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Matching_Qualitative_1.png" class="center"/>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Matching_Qualitative_2.png" class="center"/>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Matching_Qualitative_3.png" class="center"/>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <div class="center-image">
+      <img src="media/balf/Matching_Qualitative_4.png" class="center"/>
+    </div>
+
   </div>
 </section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{lu2024fast,
-  title = {Fast Sparse View Guided NeRF Update for Object Reconfigurations}, 
-  author = {Ziqi Lu and Jianbo Ye and Xiaohan Fei and Xiaolong Li and Jiawei Mo and Ashwin Swaminathan and Stefano Soatto},
-  year={2024},
-  eprint={2403.11024},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV}
-}</code></pre>
+    <pre><code>@InProceedings{Zhao_2024_WACV,
+      author    = {Zhao, Zhenjun},
+      title     = {BALF: Simple and Efficient Blur Aware Local Feature Detector},
+      booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+      month     = {January},
+      year      = {2024},
+      pages     = {3362-3372}
+  }</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    The author thanks <a href="https://ethliup.github.io/">Peidong Liu</a> and <a href="http://www.mae.cuhk.edu.hk/~bmchen">Ben M. Chen</a> for supporting.
   </div>
 </section>
 
 
 <footer class="footer">
   <div class="container">
-    <!--<div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>-->
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
+    <div class="columns is-centered">
+      <div class="column is-8">
         <div class="content">
           <p>
-            The website template is borrowed from <a rel="inserf"href="https://mohamad-shahbazi.github.io/inserf/">InseRF</a>.
+            We thank the <a href="https://nerfies.github.io/">Nerfies</a> authors for providing us
+            with this <a href="https://github.com/nerfies/nerfies.github.io">website template</a>.
           </p>
         </div>
       </div>
