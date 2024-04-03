@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Fast Sparse View Guided NeRF Update for Object Reconfigurations.">
+  <meta name="keywords" content="NeRF, update">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fast Sparse View Guided NeRF Update for Object Reconfigurations</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!--
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+-->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Fast Sparse View Guided <span style="color: #FF5733;">NeRF Update</span> for Object Reconfigurations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://520xyxyzq.github.io">Ziqi Lu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://www.jianboye.org">Jianbo Ye</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://feixh.github.io">Xiaohan Fei</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dragonlong.github.io">Xiaolong Li</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jiawei-mo.github.io">Jiawei Mo</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=3CEGNJQAAAAJ&hl=en">Ashwin Swaminathan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://web.cs.ucla.edu/~soatto/">Stefano Soatto</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>MIT</span>
+            <span class="author-block"><sup>2</sup>Amazon AWS AI Labs</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.11024"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Arxiv</span>
+                </a>
+              </span>
+              
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="has-text-centered">
+        <video id="teaser" controls autoplay muted loop playsinline width="60%">
+          <source src="./static/videos/video.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract Section -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural Radiance Field (NeRF), as an implicit 3D scene representation, 
+            lacks inherent ability to accommodate changes made to the initial static scene. 
+            If objects are reconfigured, 
+            it is difficult to update the NeRF to reflect the new state of the scene without time-consuming data re-capturing and NeRF re-training.
+            To address this limitation, 
+            we develop the first update method for NeRFs to physical changes.
+            Our method takes only sparse new images (e.g. 4) of the altered scene as extra inputs and update the pre-trained NeRF in around 1 to 2 minutes.
+          </p>
+          <p>
+            Particularly, we develop a pipeline to identify scene changes and update the NeRF accordingly.
+            Our core idea is the use of a second helper NeRF to learn the local geometry and appearance changes,
+            which sidesteps the optimization difficulties in direct NeRF fine-tuning.
+            The interpolation power of the helper NeRF is the key to accurately reconstruct the un-occluded objects regions under sparse view supervision.
+            Our method imposes no constraints on NeRF pre-training, and requires no extra user input or explicit semantic priors.
+            It is an order of magnitude faster than re-training NeRF from scratch while maintaining on-par and even superior performance.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Figure Section -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <figure>
+          <img id="teaser" width="100%" src="./static/images/Figure1.png" alt="Teaser image showing the results of the NeRF update method.">
+          <figcaption style="text-align: justify;">
+            Figure 1: After training a NeRF for pieces on a Chinese chess board from hundreds of RGB images,
+            a player moves the "Pao" piece, highlighted by the red box, to a new position.
+            To accommodate this physical object reconfiguration,
+            we take 4 additional images for the changed scene,
+            and use our method to estimate scene changes and quickly update the pre-trained NeRF with the guidance of the 4 images.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Additional sections can be added here following the same structure -->
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!--/ Results. -->
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-centered">
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Chess_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Chess_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Chess_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Shoe_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pre-trained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Shoe_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Shoe_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Liar_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Liar_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Liar_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Bunny_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Bunny_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Bunny_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Soda_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Soda_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Soda_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Cube_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Cube_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Cube_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Cone_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pre-trained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Cone_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Cone_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Re-trained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Sphere_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Sphere_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Sphere_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+          <!-- Example. -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="replay-video"
+                       autoplay
+                       controls
+                       loop
+                       muted
+                       preload
+                       playsinline
+                       width="100%">
+                  <source src="./static/videos/results/23.11.25_Cylinder_pretrain.mp4"
+                          type="video/mp4">
+              </video>
+              <div class="column">
+                Pretrained NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Cylinder_Ours.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Updated NeRF
+              </div>
+            </div>
+            <div class="column">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     loop
+                     muted
+                     preload
+                     playsinline
+                     width="100%">
+                <source src="./static/videos/results/23.11.25_Cylinder_retrain.mp4"
+                        type="video/mp4">
+              </video>
+              <div class="column">
+                Retrained NeRF
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{lu2024fast,
+  title = {Fast Sparse View Guided NeRF Update for Object Reconfigurations}, 
+  author = {Ziqi Lu and Jianbo Ye and Xiaohan Fei and Xiaolong Li and Jiawei Mo and Ashwin Swaminathan and Stefano Soatto},
+  year={2024},
+  eprint={2403.11024},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!--<div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content">
+          <p>
+            The website template is borrowed from <a rel="inserf"href="https://mohamad-shahbazi.github.io/inserf/">InseRF</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
