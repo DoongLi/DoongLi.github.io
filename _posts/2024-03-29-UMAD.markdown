@@ -6,7 +6,7 @@ image: /images/2.png
 categories: research
 author: "Dong Li"
 authors: "<strong>Dong Li</strong>, Lineng Chen, Cheng-Zhong Xu, Hui Kong"
-venue: "Submit to IROS"
+venue: "IROS 2024"
 website: https://doongli.github.io/umad
 paper: https://doongli.github.io/
 video: https://www.youtube.com/watch?v=xORb4H-AyNw
