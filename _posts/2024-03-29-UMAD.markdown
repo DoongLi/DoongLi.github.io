@@ -11,7 +11,7 @@ website: https://doongli.github.io/umad
 paper: https://arxiv.org/pdf/2408.12527
 video: https://www.youtube.com/watch?v=xORb4H-AyNw
 code: https://github.com/IMRL/UMAD
-poster: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/UMAD-Poster.pdf
+poster: doc/UMAD-Poster.pdf
 ---
 
 A large-scale reference-based anomaly detection benchmark dataset that captures real-world scenarios. <strong>UMAD</strong> is applicable for both <strong>Change Detection</strong> and <strong>Anomaly Detection</strong> tasks.
