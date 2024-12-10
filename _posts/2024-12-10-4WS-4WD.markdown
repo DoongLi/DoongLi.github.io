@@ -1,0 +1,14 @@
+---
+layout: post
+title:  " Autonomous Navigation for 4WS-4WD Agricultural Robots with Omni-Directional Kinematics Model"
+date:   2024-12-10 22:21:59 +00:00
+image: /images/4WS-4WD.png
+categories: research
+author: "Dong Li"
+authors: "Lebin Liang, Yushun Tao, <strong>Dong Li</strong>, Guoyuan Liang, Can Wang, Xinyu Wu"
+venue: "<strong>Submitted to IEEE Robotics and Automation Practice (RA-P)</strong>"
+paper(todo): 
+video(todo): 
+---
+
+An autonomous navigation system for a 4-wheel steering and driving agricultural robot, optimizing mobility and localization in complex environments.
