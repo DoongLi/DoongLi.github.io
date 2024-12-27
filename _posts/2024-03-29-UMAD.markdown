@@ -8,7 +8,8 @@ author: "Dong Li"
 authors: "<strong>Dong Li</strong>, Lineng Chen, Cheng-Zhong Xu, Hui Kong"
 venue: "<strong>IROS 2024</strong>"
 website: https://doongli.github.io/umad
-paper: https://arxiv.org/pdf/2408.12527
+arxiv: https://arxiv.org/pdf/2408.12527
+paper: https://ieeexplore.ieee.org/document/10802194
 video: https://www.youtube.com/watch?v=xORb4H-AyNw
 code: https://github.com/IMRL/UMAD
 poster: doc/UMAD-Poster.pdf
