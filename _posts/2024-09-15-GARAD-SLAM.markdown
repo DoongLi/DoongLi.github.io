@@ -6,7 +6,7 @@ image: /images/GARAD-SLAM.gif
 categories: research
 author: "Dong Li"
 authors: "Mingrui Li, Weijian Chen, Na Cheng, Jingyuan Xu, <strong>Dong Li</strong>, Hongyu Wang"
-venue: "<strong>Accepted to ICRA 2025</strong>"
+venue: "<strong>Accepted By ICRA 2025</strong>"
 paper(todo): 
 video(todo): 
 ---
