@@ -7,7 +7,7 @@ categories: research
 author: "Dong Li"
 authors: "Mingrui Li, Weijian Chen, Na Cheng, Jingyuan Xu, <strong>Dong Li</strong>, Hongyu Wang"
 venue: "<strong>Accepted By ICRA 2025</strong>"
-paper(todo): 
+arxiv: https://arxiv.org/pdf/2502.03228
 video(todo): 
 ---
 
