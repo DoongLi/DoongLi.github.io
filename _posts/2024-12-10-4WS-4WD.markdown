@@ -5,8 +5,8 @@ date:   2024-12-09 10:21:59 +00:00
 image: /images/4WS-4WD.png
 categories: research
 author: "Dong Li"
-authors: "Lebin Liang, Yushun Tao, <strong>Dong Li</strong>, Guoyuan Liang, Can Wang, Xinyu Wu"
-venue: "<strong>Submitted to IEEE Robotics and Automation Practice (RA-P)</strong>"
+authors: "Lebin Liang, Yushun Tao, <u>Dong Li</u>, Guoyuan Liang, Can Wang, Xinyu Wu"
+venue: "Submitted to IEEE Robotics and Automation Practice (RA-P), 2024"
 paper(todo): 
 video(todo): 
 ---
