@@ -5,8 +5,8 @@ date:   2024-03-29 22:21:59 +00:00
 image: /images/2.png
 categories: research
 author: "Dong Li"
-authors: "<strong>Dong Li</strong>, Lineng Chen, Cheng-Zhong Xu, Hui Kong"
-venue: "<strong>IROS 2024</strong>"
+authors: "<u>Dong Li</u>, Lineng Chen, Cheng-Zhong Xu, Hui Kong"
+venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024"
 website: https://doongli.github.io/umad
 arxiv: https://arxiv.org/pdf/2408.12527
 paper: https://ieeexplore.ieee.org/document/10802194
