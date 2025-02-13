@@ -13,6 +13,7 @@ paper: https://ieeexplore.ieee.org/document/10802194
 video: https://www.youtube.com/watch?v=xORb4H-AyNw
 code: https://github.com/IMRL/UMAD
 poster: doc/UMAD-Poster.pdf
+comments: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/UMAD_IROS2024_Review_Comments.txt
 ---
 
 A large-scale reference-based anomaly detection benchmark dataset that captures real-world scenarios. <strong>UMAD</strong> is applicable for both <strong>Change Detection</strong> and <strong>Anomaly Detection</strong> tasks.
