@@ -8,6 +8,7 @@ author: "Dong Li"
 authors: "Mingrui Li, Weijian Chen, Na Cheng, Jingyuan Xu, <u>Dong Li</u>, Hongyu Wang"
 venue: "International Conference on Robotics and Automation (ICRA), 2025"
 arxiv: https://arxiv.org/pdf/2502.03228
+comments: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/GARAD-SLAM_ICRA2025_Review_Comments.txt
 ---
 
 GARAD-SLAM is the first 3DGS-based SLAM system designed specifically for dynamic scenes.
