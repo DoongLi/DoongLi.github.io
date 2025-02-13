@@ -152,6 +152,9 @@
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %}
+              {% if post.comments %}
+              <a href="{{post.comments}}">Review Comments</a> /
+              {% endif %}
               <p></p>
               {{ post.excerpt }}
             </td>
