@@ -1,0 +1,77 @@
+Reviewer 1 of IROS 2024 submission 1446
+
+Comments to the author
+======================
+
+This work presents a dataset designed to evaluate anomaly-detection algorithms, as well as an evaluation of several deep-learning based detection algorithms on the reference dataset.
+
+One immediate question raised by this work is the definition of 'anomaly' - the authors' distinction between 'change detection' and 'anomaly detection' would benefit from additional discussion. 
+
+The use of FAST-LIO2 as a 'ground truth' pose estimate is slightly problematic without comparison to other methods such as RTK GPS. At a minimum, the authors could have included static well-known artifacts (say, wall-mounted Apriltags) that could have been used for loop closure purposes. Structuring the trajectories to allow for reporting of an overall loop closure pose estimate error would have been useful; the authors do not report the trajectories that form the foundation of each dataset.
+
+As the dataset relies heavily on the camera intrinsics and extrinsics with respect to the lidar, the method and results of both of those calibrations should be reported.
+
+The authors propose a heuristic for telling when a translation is sufficiently 'small' as 0.03m. However, this value is not justified. Is this 0.03m in any particular direction or 0.03m total (as in Euclidean distance)? What is the effect for applying the translation correction all the time? 
+
+In the dataset, the authors do not quantify how many pixels each 'anomaly' occupies. Also, in the text, the resized image states a potentially row/col swapped size of 360x640. The authors should state the method for downsampling (e.g. interpolation, binning, etc)?
+
+The score work in Fig 6 could use add'l explanation about how the authors' method attaches more weight to coverage in coarser levels. This sentence is missing and requires the reader to work to figure out what the difference is.
+
+Comparison of alignment performance would benefit from the use of a rigorous statistical test, such as a t-test, rather that relying on intuition to identify that the proposed method truly represents a significant improvement upon the state of the art.
+
+To support reproducible results, the authors' plans to make their dataset and code available through Github is appreciated as a service to the community. The authors may wish to consider publicizing their dataset through listserv announcements and other means (such as https://github.com/mint-lab/awesome-robotics-datasets) that include ways of measuring community usage to gauge community interest.
+
+The paper has several mechanical errors that would benefit from a thorough proofreading (for example, COLMAP is always capitalized, etc). The same goes for the bibliography to correct proper noun and abbreviation capitalization errors.
+
+The video does not have a narration to help explain the novelty of the work or the importance of the contributions. 
+
+Comments on the Video Attachment
+================================
+The video would benefit from a narration to help emphasize the novelty and contributions of the work. 
+
+
+Reviewer 3 of IROS 2024 submission 1446
+
+Comments to the author
+======================
+
+This paper focuses on a dataset for anomaly detection (with references) of robot patrols. Here are some comments:
+
+1. In the introduction, the authors state that "Generally, anomaly detection can be categorized into anomaly detection with reference (ADr) and anomaly detection without reference (ADwr) depending on whether using reference data or not." This statement lacks a citation support.
+
+2. Table 1 looks good. 
+
+3. Your citation "16" is a work focusing on abandoned object detection, which I don't think can be equated with anomaly detection, especially since "anomaly" and "anomalous" doesn't appear in that article. Moreover, the authors of that paper did not claim it was a paper on anomaly detection as well.
+
+4. Although the authors have mentioned in the introduction that ADr uses a framework for change detection, the whole related work section discusses change detection. Still, there is no related work on ADr. Moreover, ADr is not a widely recognised classification. At least the authors don't use citations to support it, and I only found one
+review paper using a similar classification. However, when I looked further at the papers mentioned in this category, I found that few claimed they fall into this category.
+
+5. The most severe issue is the authors did not define anomalous objects. They only mentioned in Figure 3 that the objects shown in the figure are labelled as anomalous objects in the dataset. They did not explain the basis for this categorisation. In my opinion, one of the most critical aspects of an anomaly detection dataset regarding robotics is how to define an anomaly and whether this definition is universal or not for robotics applications. It is uncritical and irregular to classify some objects as anomalous without justification. Moreover, there is one thing that confused me. In Figure 1 (lower right image), the warning cone is classified as a moved object. However, in Figure 3, the warning cone is in the group of anomalous objects. I'm not sure exactly what category it falls into. Moreover, the authors also didn't distinguish between moved and anomalous objects well; more clarification is needed. 
+
+6. Except for defining the anomalous objects, the rest of the parts of the production of the dataset are satisfied. I especially like the approach taken in the alignment section.
+
+7. The experimental data analysis section reinforces the fact that this dataset is actually a change detection dataset. This is because the algorithms used to measure the data are well-known in change detection. The authors of these papers do not claim that their algorithms are for anomaly detection. At the very least, the authors in this paper should explain why these change detection algorithms can be used to evaluate the ADr dataset. Strictly speaking, despite the similarities between ADr and change detection, there must also be significant differences. Otherwise, why not just say change detection to avoid ambiguity? Perhaps ADr is a reasonable classification, but this dataset is not strictly ADr-orientated.
+
+8. Table 5 shows the performance of different CD algorithms, which looks good to me. A further analysis could be better. For example, C-3PO is a SOTA for ChangeSim, but not for some of the metrics in this paper. 
+
+Overall, I recognise the process of making the dataset, but the article needs improvement. Again, strictly speaking, I don't think this is an anomaly detection dataset, as what constitutes an anomaly is never clearly defined. However, it can be a change detection dataset, especially since there is currently a lack of relatively large-scale robot patrol datasets based on real scenarios collected in this area. Unfortunately, from the point of view of the article, some obvious problems must be addressed. Therefore, I cannot give a very positive final rating. I hope the authors can understand.
+
+Comments on the Video Attachment
+================================
+
+The video covers most of the content of the article and effectively shows the experimental and data analysis parts of the article.
+
+
+Comments to author (Associate Editor)
+=====================================
+
+Both reviewers feel that this is a useful paper with an interesting technique and a potentially very useful dataset. However, both reviewers point out that this is *not* an anomaly detection dataset because there is no definition of what "normal" is. Rather, this is a change detection dataset.
+
+From reviewing the paper, I agree with the comments from both reviewers and I strongly urge the authors to rewrite the text accordingly.
+
+I believe that R3's review focuses on this issue slightly too much, and so I believe that R1's review is a fairer reflection of the paper.
+
+----------------------------------------
+Comments on Video Attachment:
+
+As noted, the video provide a good summary of the algorithm. I think it could be improved by showing the sum squared error differences between the warping strategies.
