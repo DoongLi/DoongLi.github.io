@@ -1,0 +1,95 @@
+Reviewer 5 of ICRA 2025 submission 1306
+
+Comments to the author
+======================
+
+The authors propose a real-time 3D GS-based SLAM system specifically designed for dynamic scenes. The system employs a CRF model to handle dynamic feature points. To more effectively verify the motion state of Gaussian points, the authors utilize sparse optical flow to conduct motion consistency checks. Additionally, by employing a Gaussian pyramid network, the feature points are associated with 3D Gaussian points during the mapping process.
+
+However, my primary concern lies with the technical contributions of the paper. Many of the methods discussed have previously been introduced in other research. The unique contributions of this study require clearer emphasis and elucidation. This makes the paper fall into the category of `A+B+C` (motion segmentation with crf+ Photo-SLAM-like static neural SLAM tracking+ 3D gaussian based rendering) cliche and the contribution seems to be relatively incremental. 
+
+Other comments and concerns:
+1. Introduction: contributions (2) tight coupling and mutual enhancement between tracking and mapping. I personally disagree that it can be called tight coupled. Actually, the gaussian map has not been elegant joint optimized with the camera pose. 
+2. Gaussian pyramid and CRF motion segmentation have been introduced in Photo-SLAM, LC-CRF-SLAM[1], and Co-Fusion[2]. The author should provide a clearer explanation of the innovative aspects and distinctions of this part. 
+3. Equation 5 and its description do not match: the definition of gamma is not explained. Furthermore, the expression of ni and nj are not provided in the original paper.
+4. The author should visualize the segmentation results to better demonstrate the effectiveness of the CRF method. Furthermore, the author needs to visualize the reconstruction effects of the Gaussian spheres to demonstrate that sparse feature points can adequately represent the entire scene.
+5. Inadequate experimental evaluations and comparisons in Table I. It is recommended that the paper also includes comparisons with other methods on low dynamic and static sequences from the TUM dataset. The authors should clarify whether this method surpasses or is comparable to current state-of-the-art static methods. If not, under what specific motion conditions does this method begin to outperform the static state-of-the-art?
+6. In Table 5, the average speed of the open-source code for SplaTAM appears to be slower than reported and does not achieve real-time operation. Additionally, the training process for mapping is typically time-consuming. Could the authors please explain the reasons behind the high FPS indicated here?
+
+
+[1] Du, Z. J., Huang, S. S., Mu, T. J., Zhao, Q., Martin, R. R., & Xu, K. (2020). Accurate dynamic SLAM using CRF-based long-term consistency. IEEE Transactions on Visualization and Computer Graphics, 28(4), 1745-1757.
+
+[2] Rünz, M., & Agapito, L. (2017, May). Co-fusion: Real-time segmentation, tracking and fusion of multiple objects. In 2017 IEEE International Conference on Robotics and Automation (ICRA) (pp. 4471-4478)
+
+Comments on the Video Attachment
+================================
+
+Should include more video demonstrations with moving cameras and visualizations of Gaussian spheres, enabling a better evaluation of the Gaussian map and geometry.
+
+
+Reviewer 8 of ICRA 2025 submission 1306
+
+Comments to the author
+======================
+
+This paper presents GARAD-SLAM, a real-time SLAM system based on 3D Gaussian splatting (3DGS), specifically designed for dynamic scenes with RGB-D stream input. By leveraging a Gaussian pyramid network and conditional random field (CRF) for eliminating dynamic Gaussians, the system mitigates mapping errors and tracking drift caused by moving objects. The integration of a sparse optical flow validation for label correction enables tighter coupling between tracking and mapping, enhancing both tracking precision and rendering quality. Experimental results on TUM and BONN datasets demonstrate the performance of GARAD-SLAM in terms of tracking and rendering accuracy under real-world conditions.
+
+Strengths:
+1.The proposed method addresses the limitations of pervious 3DGS-based SLAM methods in dynamic scenes by applying the conditional CRF based dynamic point removal strategy and the tailored dynamic gaussians optimization.
+2.The sparse optical flow-based verification effectively corrects mislabeled Gaussians, preserving static points and enhancing tracking reliability.
+3.The experimental results on TUM and BONN datasets verify the system's tracking accuracy and rendering quality under real-world conditions.
+
+However, here are some suggestions:
+1.The paper lacks sufficient quantitative results on rendering quality, such as SSIM or PSNR. Although the paper argues that "it is not feasible to obtain ground truth reconstructions in dynamic environments," considering that the attached video shows some sequence where camera pose variation is limited, the authors could attempt experiments on sequences with fixed viewpoints from other datasets and provide quantitative results on rendering quality.
+2.The paper lacks necessary units in the presentation of results, such as in TABLE III and TABLE IV.
+3.In TABLE I and Fig. 3, the word of sequences should be "walking" but "waking".
+4.It is recommended to include the limitations of this method in the introduction or conclusion. For example, as shown in the attached video, the assumption of "a static scene for tracking during the first ten frames" causes artifacts from dynamic objects in the initial frames to persist for a long period. Even after these dynamic objects have left that part of the scene, their artifacts remain, reducing the rendering quality.
+
+Comments on the Video Attachment
+================================
+
+The scenes in the video could be more varied. For instance, incorporating substantial changes in camera poses would better demonstrate the impact of movement on the rendering.
+
+
+Reviewer 9 of ICRA 2025 submission 1306
+
+Comments to the author
+======================
+
+This paper presents a method of 3DGS based reconstruction and rendering of a scene with dynamic objects removed, by making use of multiscale filtering and a Conditional Random Field to guide the system to remove dynamics from the scene. The results are qualitatively pretty good, and has realtime framerate. I would describe the technology used as good, but not cutting edge or extremely innovative, this is more of an application paper. 
+
+Unfortunately, there doesn't seem to be any published code, and being a system design paper, this would be challenging to replicate or use. This was what tipped the scale for me between rating this 4.0 and 4.5.
+
+I would caution the authors that although the current work is on par with current papers coming out in the 3D reconstruction area, monocular depth estimation techniques based on deep learning that are common in the industry on proprietary datasets provide noticeably better reconstructions on less input data, so I don't think if this paper had come out a year later I would have considered it competitive. Still, this paper has some advantage in that it has relatively few free parameters, and thus doesn't require as large of a dataset to train/select them. It also uses relatively simple assumptions in the design, so I would expect it to be robust to many different scene types, which can be a problem with learning approaches.
+
+I would have liked to see some comparison of memory usage and compute power needed (watts) vs other methods, as many methods can achieve fairly high framerate by simply burning lots of power on the GPU, which I suspect this method might be a bit better about.
+
+Comments on the Video Attachment
+================================
+
+Looks good. Gives a good idea of the input and quality of output produced
+
+
+Comments to author (Associate Editor)
+=====================================
+
+The authors extend the successful 3DGS SLAM system to handle dynamic scene elements, improving both tracking and mapping.
+
+One reviewer recognizes the strengths of this method, and makes good suggestions about improvements to the paper.  This reviewer notes that the assumed absence of dynamic elements in the first ten frames can cause significant problems when violated.  I see this as a significant restriction that the authors should work to remove.
+
+Another reviewer also liked the results, but was concerned that the innovation was not large, and may well be displaced by deep learning methods in the near future. Still, data and power requirements might continue to give this method an edge over deep learning methods.  
+
+The final reviewer seems to be more critical, but I believe that some of his comments can be treated as suggestions for revision, and others are unclear (e.g., 5:  why is evaluation on static scenes relevant for this paper?;  6: do you have an external source for information about the speed of SplaTAM?).
+
+----------------------------------------
+Comments on Video Attachment:
+
+See reviewer comments.
+Comments to author (Editor)
+================================
+
+The Editor sees the paper less positive than the Associate Editor.
+
+----------------------------------------
+Comments on Video Attachment:
+
+-
