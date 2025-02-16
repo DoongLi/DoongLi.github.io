@@ -6,7 +6,7 @@ image: /images/4WS-4WD.png
 categories: research
 author: "Dong Li"
 authors: "Lebin Liang, Yushun Tao, <u>Dong Li</u>, Guoyuan Liang, Can Wang, Xinyu Wu"
-venue: "Submitted to IEEE Robotics and Automation Practice (RA-P), 2024"
+venue: "Submitted to IROS 2025,   [RA-P Editorial Rejection comments](https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/RA-P_Editorial_Rejection_Comments.txt)"
 paper(todo): 
 video(todo): 
 ---
