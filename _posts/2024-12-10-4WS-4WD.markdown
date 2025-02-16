@@ -6,9 +6,10 @@ image: /images/4WS-4WD.png
 categories: research
 author: "Dong Li"
 authors: "Lebin Liang, Yushun Tao, <u>Dong Li</u>, Guoyuan Liang, Can Wang, Xinyu Wu"
-venue: "Submitted to IROS 2025,   [RA-P Editorial Rejection comments](https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/RA-P_Editorial_Rejection_Comments.txt)"
+venue: "Submitted to IROS 2025"
 paper(todo): 
 video(todo): 
+rap: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/RA-P_Editorial_Rejection_Comments.txt
 ---
 
 An autonomous navigation system for a 4-wheel steering and driving agricultural robot, optimizing mobility and localization in complex environments.
