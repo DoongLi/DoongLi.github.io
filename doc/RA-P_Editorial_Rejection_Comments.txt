@@ -1,0 +1,13 @@
+This letter is to inform you that your manuscript titled "Autonomous Navigation for 4WS-4WD Agricultural Robots with Omni-Directional Kinematics Model," submitted to IEEE Robotics and Automation Practice, has been editorially rejected.
+
+While the topic of autonomous navigation in complex outdoor environments is of significant interest, we have determined that the primary focus of your work falls outside the scope of IEEE Robotics and Automation Practice.
+
+IEEE Robotics and Automation Practice specifically focuses on the practical application and deployment of robotics and automation technologies. It emphasizes:
+Real-world robotic systems: The journal prioritizes research that addresses the challenges of designing, building, and deploying robots in real-world settings, applications, and environments.
+- Practical solutions: The focus is on solutions that are applicable and impactful in industrial, healthcare, service, and other domains.
+- Engineering and implementation: Manuscripts should demonstrate a strong emphasis on engineering principles, practical implementation, and experimental validation in settings outside of research laboratories.
+- We acknowledge that your work and the described system may represent a future evolution of agricultural robots, however, it is clearly still a matter of fundamental research to establish whether these more complex kinematics will be of sufficient benefit to warrant the additional cost and maintenance. Prior experience (e.g., from systems like BoniRob, https://link.springer.com/article/10.1007/s13218-019-00617-x), indicate that even after exploring more versatile kinematics, practical applications tend to go back to simpler kinematics.
+
+Therefore, we encourage you to consider submitting your work to journals that specialize development of novel methods and systems rather than their application in practice.
+
+We appreciate your submission to IEEE Robotics and Automation Practice and wish you the best in your future research endeavors.
