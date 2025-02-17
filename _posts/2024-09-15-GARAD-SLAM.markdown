@@ -5,7 +5,7 @@ date:   2024-09-15 22:21:59 +00:00
 image: /images/GARAD-SLAM.gif
 categories: research
 author: "Dong Li"
-authors: "Mingrui Li, Weijian Chen, Na Cheng, Jingyuan Xu, <u>Dong Li</u>, Hongyu Wang"
+authors: "Mingrui Li, Weijian Chen, Na Cheng, Jingyuan Xu, <u>Dong Li*</u>, Hongyu Wang*"
 venue: "International Conference on Robotics and Automation (ICRA), 2025"
 arxiv: https://arxiv.org/pdf/2502.03228
 video: https://www.youtube.com/watch?v=EqPuoNDbuAQ
