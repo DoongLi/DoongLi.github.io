@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "n Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics"
+title:  "An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics"
 date:   2024-12-09 10:21:59 +00:00
 image: /images/4WS-4WD.png
 categories: research
