@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "DSOSplat: Monocular 3D Gaussian SLAM with Direct Tracking"
-date:   2025-02-01 10:21:59 +00:00
-image: /images/DSOSplat.png
+title:  "TWC-SLAM: Multi-Agent Cooperative SLAM with Text Semantics and WiFi Features Integration for Similar Indoor Environments"
+date:   2025-03-01 11:21:59 +00:00
+image: /images/IROS-2025.png
 categories: research
 author: "Dong Li"
-authors: "Yi Zhou, Zhetao Guo, <u>Dong Li</u>, Runwei Guan, Yuxiang Ren, Hongyu Wang and Mingrui Li"
-venue: "Submitted to IEEE Sensors Journal 2025"
+authors: "Chunyu Li, Shoubin Chen, <u>Dong Li</u>, Weixing Xue, Qingquan Li"
+venue: "Submitted to IROS 2025"
 code: 
 video: 
 ---
 
-We introduce DSOSplat, a monocular SLAM framework based on 3D Gaussian Splatting to address these challenges. We generate dense depth maps with absolute scale consistency by employing a self-calibrated adaptive multiview stereo (SC-AMVS) algorithm. Additionally, the accuracy and robustness of depth estimation are significantly improved through dynamic weighted fusion, local constraints, and a scale calibration factor. Our visual odometry module leverages composite depth maps and a keyframe selection strategy to further enhance tracking and reconstruction performance. Furthermore, we propose a depth smoothing regularization (DSR) method that optimizes local gradients and global consistency, thereby improving the geometric expressiveness of Gaussian Splatting and the quality of scene reconstruction.
+TWC-SLAM is a multi-agent cooperative SLAM framework that integrates text semantics and WiFi signal features to enhance location identification and loop closure detection.
