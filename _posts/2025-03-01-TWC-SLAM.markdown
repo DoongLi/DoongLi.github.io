@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "TWC-SLAM: Multi-Agent Cooperative SLAM with Text Semantics and WiFi Features Integration for Similar Indoor Environments"
+date:   2025-03-01 11:21:59 +00:00
+image: /images/IROS-2025.png
+categories: research
+author: "Dong Li"
+authors: "Chunyu Li, Shoubin Chen, <u>Dong Li</u>, Weixing Xue, Qingquan Li"
+venue: "Submitted to IROS 2025"
+code: 
+video: 
+---
+
+TWC-SLAM is a multi-agent cooperative SLAM framework that integrates text semantics and WiFi signal features to enhance location identification and loop closure detection.
