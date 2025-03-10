@@ -11,4 +11,4 @@ code:
 video: 
 ---
 
-We introduce DSOSplat, a monocular SLAM framework based on 3D Gaussian Splatting to address these challenges. We generate dense depth maps with absolute scale consistency by employing a self-calibrated adaptive multiview stereo (SC-AMVS) algorithm. Additionally, the accuracy and robustness of depth estimation are significantly improved through dynamic weighted fusion, local constraints, and a scale calibration factor. Our visual odometry module leverages composite depth maps and a keyframe selection strategy to further enhance tracking and reconstruction performance. Furthermore, we propose a depth smoothing regularization (DSR) method that optimizes local gradients and global consistency, thereby improving the geometric expressiveness of Gaussian Splatting and the quality of scene reconstruction.
+DSOSplat is a monocular SLAM framework based on 3D Gaussian Splatting.
