@@ -6,7 +6,7 @@ image: /images/4WS-4WD.png
 categories: research
 author: "Dong Li"
 authors: "Lebin Liang, Dewei Lu, Yushun Tao, <u>Dong Li</u>, Can Wang*, Xinyu Wu"
-venue: "Submitted to IROS 2025"
+venue: "Rejected By IROS 2025"
 code: https://github.com/LebinLiang/four_ws_wd 
 video: https://www.youtube.com/watch?v=HbzG5KW3qyo
 rap: https://github.com/DoongLi/DoongLi.github.io/blob/main/doc/RA-P_Editorial_Rejection_Comments.txt
