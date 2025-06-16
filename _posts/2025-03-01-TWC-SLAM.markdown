@@ -6,7 +6,7 @@ image: /images/TWC.png
 categories: research
 author: "Dong Li"
 authors: "Chunyu Li, Shoubin Chen, <u>Dong Li</u>, Weixing Xue, Qingquan Li"
-venue: "Submitted to IROS 2025"
+venue: "IROS 2025"
 code: 
 video: 
 ---
