@@ -5,7 +5,7 @@ date:   2025-02-01 10:21:59 +00:00
 image: /images/DSOSplat.png
 categories: research
 author: "Dong Li"
-authors: "Yi Zhou, Zhetao Guo, <u>Dong Li</u>, Runwei Guan, Yuxiang Ren, Hongyu Wang and Mingrui Li*"
+authors: "Yi Zhou, Zhetao Guo, <u>Dong Li</u>, Runwei Guan, Yuxiang Ren, Hongyu Wang and Mingrui Li#"
 venue: "IEEE Sensors Journal 2025"
 paper: https://ieeexplore.ieee.org/abstract/document/10994228/
 coverletter: doc/DSOSplat_cover_letter.pdf
