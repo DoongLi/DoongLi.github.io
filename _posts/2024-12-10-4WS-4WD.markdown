@@ -5,7 +5,7 @@ date:   2024-12-09 10:21:59 +00:00
 image: /images/4WS-4WD.png
 categories: research
 author: "Dong Li"
-authors: "Lebin Liang, Dewei Lu, Yushun Tao, <u>Dong Li</u>, Can Wang*, Xinyu Wu"
+authors: "Lebin Liang, Dewei Lu, Yushun Tao, <u>Dong Li</u>, Can Wang#, Xinyu Wu"
 venue: "Rejected By IROS 2025"
 code: https://github.com/LebinLiang/four_ws_wd 
 video: https://www.youtube.com/watch?v=HbzG5KW3qyo
