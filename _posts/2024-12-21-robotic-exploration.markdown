@@ -6,7 +6,7 @@ image: /images/go2-exploration.gif
 categories: research
 author: "Dong Li"
 authors: "Kai Zhang, Shoubin Chen#, <u>Dong Li</u>, Boyang Zhang, Tao Huang, Zhouhong Cai, Zehao Wu, Jiasheng Chen, Bo Zhang"
-venue: "Submitted to IEEE International Conference on Unmanned Systems (ICUS), 2025"
+venue: "IEEE International Conference on Unmanned Systems (ICUS), 2025"
 ---
 
 Autonomous exploration for building scene maps.
