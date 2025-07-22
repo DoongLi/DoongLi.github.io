@@ -11,4 +11,4 @@ code: https://github.com/jiangguangan/STG-Avatar
 video: https://www.youtube.com/watch?v=Weo0zT-5YSo
 ---
 
-STG-Avatar is a 3DGS-based framework for high-fidelity animatable human avatar reconstruction.
+STG-Avatar is a 3DGS-based framework for high-fidelity animatable human avatar reconstruction. Given a monocular video, the created human avatar was obtained after 25 minutes of training.
