@@ -8,7 +8,7 @@ author: "Dong Li"
 authors: "Guangan Jiang*, Tianzi Zhang*, <u>Dong Li</u>, Zhenjun Zhao, Haoang Li, Mingrui Li, Hongyu Wang#"
 venue: "IROS 2025"
 code: https://github.com/jiangguangan/STG-Avatar
-video: https://www.youtube.com/watch?v=Weo0zT-5YSo 
+video: https://www.youtube.com/watch?v=Weo0zT-5YSo
 ---
 
 STG-Avatar is a 3DGS-based framework for high-fidelity animatable human avatar reconstruction.
