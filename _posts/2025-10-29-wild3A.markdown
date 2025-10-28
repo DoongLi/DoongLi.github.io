@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Wild3A: Novel View Synthesis from Any Dynamic Images in Seconds"
+date:   2025-10-29 11:21:59 +00:00
+image: /images/wild3A.png
+categories: research
+author: "Dong Li"
+authors: "Mingrui Li, Shuhao Zhai, Zibing Zhao, Luyue Sun, Xinxiao Wang, <u>Dong Li#</u>, Shuhong Liu, Hongyu Wang#"
+venue: "ACM MM 2025"
+Paper: https://dl.acm.org/doi/10.1145/3746027.3754899
+code: 
+video: 
+---
+
+Wild3A is a novel view synthesis framework for unconstrained real-world environments in seconds, achieving high-fidelity 3D reconstruction from arbitrary inputs.
