@@ -7,6 +7,7 @@ categories: research
 author: "Dong Li"
 authors: "Chunyu Li, Shoubin Chen#, <u>Dong Li</u>, Weixing Xue, Qingquan Li"
 venue: "IROS 2025"
+arxiv: https://arxiv.org/pdf/2510.22754
 code: 
 video: 
 ---
