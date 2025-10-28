@@ -5,7 +5,7 @@ date:   2025-10-28 11:21:59 +00:00
 image: /images/SLAM-X.png
 categories: research
 author: "Dong Li"
-authors: "Mingrui Li\*,  <uDong Li\*</u>, Sijia Hu, Kangxu Wang, Zhenjun Zhao, Hongyu Wang#"
+authors: "Mingrui Li\*,  <u>Dong Li\*</u>, Sijia Hu, Kangxu Wang, Zhenjun Zhao, Hongyu Wang#"
 venue: "ACM MM 2025"
 Paper: https://dl.acm.org/doi/10.1145/3746027.3754971
 code: 
