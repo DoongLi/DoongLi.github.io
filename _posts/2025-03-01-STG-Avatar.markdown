@@ -7,6 +7,7 @@ categories: research
 author: "Dong Li"
 authors: "Guangan Jiang*, Tianzi Zhang*, <u>Dong Li</u>, Zhenjun Zhao, Haoang Li, Mingrui Li, Hongyu Wang#"
 venue: "IROS 2025"
+arXiv: https://arxiv.org/pdf/2510.22140
 code: https://github.com/jiangguangan/STG-Avatar
 video: https://www.youtube.com/watch?v=Weo0zT-5YSo
 ---
