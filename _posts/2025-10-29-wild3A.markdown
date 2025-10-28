@@ -12,4 +12,4 @@ code:
 video: 
 ---
 
-Wild3A is a novel view synthesis framework for unconstrained real-world environments in seconds, achieving high-fidelity 3D reconstruction from arbitrary inputs.
+Wild3A is a novel view synthesis framework that enables high-fidelity 3D reconstruction in unconstrained real-world environments in seconds, from arbitrary inputs.
