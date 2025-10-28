@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Wild3A: Novel View Synthesis from Any Dynamic Images in Seconds"
-date:   2025-10-29 11:21:59 +00:00
+date:   2025-10-29 12:21:59 +00:00
 image: /images/wild3A.png
 categories: research
 author: "Dong Li"
