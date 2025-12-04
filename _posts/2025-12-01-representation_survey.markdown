@@ -7,7 +7,7 @@ categories: research
 author: "Dong Li"
 authors: "Tianchen Deng, Yue Pan, Shenghai Yuan, <u>Dong Li</u>, Chen Wang, Mingrui Li, Long Chen, Lihua Xie, Danwei Wang, Jingchuan Wang, Javier Civera, Hesheng Wang, Weidong Chen"
 venue: "Submitted to XXX"
-arXiv: https://arxiv.org/pdf/2512.03422
+arxiv: https://arxiv.org/pdf/2512.03422
 code: https://github.com/dtc111111/awesome-representation-for-robotics
 ---
 
