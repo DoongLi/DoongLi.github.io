@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wild3A: Novel View Synthesis from Any Dynamic Images in Seconds"
+title:  "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models"
 date:   2025-10-29 12:21:59 +00:00
 image: /images/RepresentationSurvey.png
 categories: research
