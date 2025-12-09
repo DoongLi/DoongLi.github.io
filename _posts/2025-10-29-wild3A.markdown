@@ -7,7 +7,7 @@ categories: research
 author: "Dong Li"
 authors: "Mingrui Li, Shuhao Zhai, Zibing Zhao, Luyue Sun, Xinxiao Wang, <u>Dong Li#</u>, Shuhong Liu, Hongyu Wang#"
 venue: "ACM MM 2025"
-Paper: https://dl.acm.org/doi/10.1145/3746027.3754899
+paper: https://dl.acm.org/doi/10.1145/3746027.3754899
 code: https://github.com/DrLi-Ming/Wild3A
 ---
 
