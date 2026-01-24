@@ -9,6 +9,7 @@ authors: "Tianchen Deng, Yue Pan, Shenghai Yuan, <u>Dong Li</u>, Chen Wang, Ming
 venue: "Submitted to XXX"
 arxiv: https://arxiv.org/pdf/2512.03422
 code: https://github.com/dtc111111/awesome-representation-for-robotics
+post: https://mp.weixin.qq.com/s/vBNr9hGz9mEH9cprGLm_GQ
 ---
 
 This paper categorizes core robotics modules into five parts: Perception, Mapping, Localization, Navigation, and Manipulation. It reviews standard 3D scene representation methods, compares their strengths and limitations across these modules, and addresses the central question: What is the best 3D scene representation for robotics? The paper further discusses future trends, focusing on how 3D Foundation Models could serve as a unified solution for robotic applications, while highlighting remaining challenges. It aims to provide a concise yet comprehensive resource for both newcomers and experts in the field.
