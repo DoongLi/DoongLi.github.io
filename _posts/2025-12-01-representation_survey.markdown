@@ -6,7 +6,7 @@ image: /images/RepresentationSurvey.png
 categories: research
 author: "Dong Li"
 authors: "Tianchen Deng, Yue Pan, Shenghai Yuan, <u>Dong Li</u>, Chen Wang, Mingrui Li, Long Chen, Lihua Xie, Danwei Wang, Jingchuan Wang, Javier Civera, Hesheng Wang, Weidong Chen"
-venue: "Submitted to XXX"
+venue: "Submitted to IEEE Transactions on Robotics (T-RO)"
 arxiv: https://arxiv.org/pdf/2512.03422
 code: https://github.com/dtc111111/awesome-representation-for-robotics
 post: https://mp.weixin.qq.com/s/vBNr9hGz9mEH9cprGLm_GQ
