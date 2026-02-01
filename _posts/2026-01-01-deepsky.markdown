@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Denoising the Deep Sky: Physics-Based CCD Noise Formation for Astronomical Imaging"
+date:   2026-01-29 12:21:59 +00:00
+image: /images/denoising_sky_cover.png
+categories: research
+author: "Dong Li"
+authors: "Shuhong Liu, Xining Ge, Ziying Gu, Lin Gu, Ziteng Cui, Xuangeng Chu, Jun Liu, <u>Dong Li</u>, Tatsuya Harada"
+venue: "In preprint, 2026"
+code: https://github.com/I2WM
+---
+
