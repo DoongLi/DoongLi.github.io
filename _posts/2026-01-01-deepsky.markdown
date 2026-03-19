@@ -8,6 +8,6 @@ author: "Dong Li"
 authors: "Shuhong Liu, Xining Ge, Ziying Gu, Lin Gu, Ziteng Cui, Xuangeng Chu, Jun Liu, <u>Dong Li</u>, Tatsuya Harada"
 venue: "In preprint, 2026"
 paper: https://arxiv.org/pdf/2601.23276
-code: https://github.com/I2WM
+code: https://github.com/ShuhongLL/Denoising-Deep-Sky
 ---
 
