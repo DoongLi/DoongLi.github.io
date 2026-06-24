@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "He3-Seeker: Robotic Information Planning for Lunar Helium-3 Distribution Mapping"
+date:   2025-06-23 11:21:59 +00:00
+image: /images/He3-Seeker.png
+categories: research
+author: "Dong Li"
+authors: "<u>Dong Li*</u>, Yujie Zheng*, Chengdeng Cao, Siyu Teng, Yuchen Li, Yang Gao, Long Chen"
+venue: "ACM MM 2025"
+code: https://github.com/OpenSpace-Lab/He3-Seeker
+video: 
+---
+
+Detection of dense Helium-3 distribution in the unexplored regions of the Moon
