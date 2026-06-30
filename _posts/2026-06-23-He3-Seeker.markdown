@@ -7,6 +7,7 @@ categories: research
 author: "Dong Li"
 authors: "<u>Dong Li*</u>, Yujie Zheng*, Chengdeng Cao, Siyu Teng, Yuchen Li, Yang Gao, Long Chen#"
 venue: "Submitted to the International Conference on Space Robotics (iSpaRo) 2026"
+arxiv: https://arxiv.org/pdf/2606.28746
 code: https://github.com/OpenSpace-Lab/He3-Seeker
 video: 
 ---
