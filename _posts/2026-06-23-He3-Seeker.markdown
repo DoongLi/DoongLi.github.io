@@ -9,7 +9,7 @@ authors: "<u>Dong Li*</u>, Yujie Zheng*, Chengdeng Cao, Siyu Teng, Yuchen Li, Ya
 venue: "International Conference on Space Robotics (iSpaRo) 2026"
 arxiv: https://arxiv.org/pdf/2606.28746
 code: https://github.com/OpenSpace-Lab/He3-Seeker
-video: 
+website: https://openspace-lab.github.io/He3-Seeker
 ---
 
 Informative Path Planning for Dense Lunar Helium-3 Mapping via Sparse Robotic Sampling
