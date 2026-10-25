@@ -1,549 +1,174 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <title>{{ site.name }}</title>
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-</head>
-
-
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Frankie Dong Li — space robotics, field robotics, and 3D vision.">
+<meta name="author" content="{{ site.name }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<title>{{ site.name }} | Space Robotics & 3D Vision</title>
+<style>:root{--bg:#fcfcfb;--ink:#141b26;--muted:#687587;--line:#dfe4e9;--green:#244e68;--pale:#edf3f6;--accent:#2c849c;--white:#fff;--serif:Georgia,"Times New Roman",serif;--sans:Inter,"Segoe UI",Arial,sans-serif;--max:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--green);text-underline-offset:3px}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+.bar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font-size:13px;font-weight:750;letter-spacing:.11em;text-decoration:none;color:var(--ink)}.logo i{color:var(--accent);font-style:normal}nav{display:flex;gap:28px;font-size:12px;letter-spacing:.02em}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--green)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:62px 0 74px}.eyebrow,.label{color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:.19em;font-weight:750}.hero h1{font:clamp(50px,6.5vw,76px)/.97 var(--serif);letter-spacing:-.055em;margin:20px 0 20px;color:var(--ink)}.hero h1 em{font-style:normal;color:var(--green)}.lead{font:21px/1.5 var(--serif);color:#485667;max-width:570px;margin:0 0 16px}.intro{font-size:14px;color:var(--muted);max-width:570px}.hero a:not(.btn){color:var(--green)}.actions{display:flex;gap:12px;margin-top:25px;flex-wrap:wrap}.btn{border:1px solid #244e68;padding:10px 16px;border-radius:2px;text-decoration:none;font-size:12px;font-weight:700;color:var(--green);letter-spacing:.02em}.btn.main{background:#244e68;color:#fff}.btn:hover{background:#2c849c;border-color:#2c849c;color:#fff}
+.visual{height:410px;position:relative;overflow:hidden;background:#071321;border:1px solid #cdd7df}.hero-image{display:block;width:100%;height:100%;object-fit:cover;object-position:68% center}.visual:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(4,14,25,.55));pointer-events:none}.stamp{position:absolute;z-index:1;left:17px;bottom:14px;color:#f4f8fb;font:10px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase}.caption{position:absolute;z-index:1;right:17px;top:15px;color:#e5eef4;font:10px var(--sans);letter-spacing:.13em;text-transform:uppercase;opacity:.8}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);padding:17px 0;margin-bottom:76px}.fact{padding:0 20px;border-right:1px solid var(--line)}.fact:first-child{padding-left:0}.fact:last-child{border:0}.fact b{display:block;font:19px var(--serif);font-weight:500}.fact span{font-size:11px;color:var(--muted);letter-spacing:.02em}
+section{padding-bottom:76px;scroll-margin-top:20px}.head{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:22px}.head h2{font:34px/1.1 var(--serif);letter-spacing:-.03em;margin:0}.head p{font-size:11px;color:var(--muted);margin:0;letter-spacing:.03em}.split{display:grid;grid-template-columns:1fr 1fr;gap:48px}.copy p{color:#4e5b69;margin:0 0 15px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}.card{background:transparent;border:0;border-top:1px solid var(--line);padding:14px 4px 16px 0}.card b{font:19px var(--serif);font-weight:500}.card p{font-size:12px;color:var(--muted);margin:4px 0 0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{background:var(--pale);color:var(--green);padding:4px 8px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.04em}
+.news{border-top:1px solid var(--line)}.news article{display:grid;grid-template-columns:102px 1fr;gap:18px;padding:13px 0;border-bottom:1px solid var(--line)}time{color:var(--accent);font-size:10px;font-weight:750;letter-spacing:.09em}.news p{margin:0;color:#465464;font-size:13px}details{margin-top:15px}summary{cursor:pointer;color:var(--green);font-size:12px;font-weight:700}.pubs{display:grid;gap:0}.pub{display:grid;grid-template-columns:42px 1fr;gap:15px;padding:17px 2px;border-bottom:1px solid var(--line)}.num{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:var(--pale);color:var(--green);font:12px var(--serif)}.pub h3{font:20px/1.3 var(--serif);margin:0 0 4px}.pub p{font-size:12px;color:var(--muted);margin:0 0 5px}.pub a{font-size:11px;font-weight:700;text-decoration:none}.pub-links{display:flex;gap:14px;flex-wrap:wrap}.copy{font-size:13px;color:#4b5851;margin-top:8px}
+.repos{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;border-top:1px solid var(--line)}.repo{padding:13px 4px 13px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);display:flex;justify-content:space-between;align-items:center}.repo b{font:16px var(--serif);font-weight:500}.repo small{display:block;color:var(--muted);font-size:10px}.repo i{font-style:normal;color:var(--accent)}
+.bottom{display:grid;grid-template-columns:1fr 1fr;gap:44px}.bottom h3{font:21px var(--serif);margin:0 0 10px}.bottom ul{padding-left:17px;margin:0;color:#4b5866;font-size:12px}.bottom li{padding:4px 0}.contact{background:#111e2d;color:white;padding:27px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-left:3px solid #2c849c}.contact h2{font:29px var(--serif);margin:0}.contact p{color:#c4cfda;margin:5px 0 0;font-size:12px}.contact a{color:white;border-color:#a6bfcc;white-space:nowrap}.foot{padding:22px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px}
+@media(max-width:740px){.wrap{width:calc(100% - 32px)}nav{gap:14px}.hero{grid-template-columns:1fr;gap:25px;padding:47px 0 58px}.hero h1{font-size:60px}.visual{height:330px}.facts{margin-bottom:56px}.split,.bottom{grid-template-columns:1fr;gap:24px}.head h2{font-size:30px}.head p{max-width:140px;text-align:right}}
+@media(max-width:460px){.nav-hide{display:none}.hero{padding-top:40px}.hero h1{font-size:52px}.visual{height:265px}.facts{grid-template-columns:1fr;gap:11px}.fact{border:0;padding:0}.news article{grid-template-columns:75px 1fr;gap:10px}.repos{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr;gap:0 12px}.card{padding:12px 0}.contact{padding:23px;align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}/* Opening sequence */
+.opening{display:none}.intro-pending,.intro-pending body{overflow:hidden}.intro-pending .opening{display:block}.intro-pending .site-page{visibility:hidden}.site-page{outline:none}
+.opening{position:fixed;inset:0;z-index:1000;background:#03070e;transition:opacity .85s ease,transform .85s cubic-bezier(.22,.61,.36,1);padding:0;scroll-margin:0}
+.opening.entering{opacity:0;transform:translateY(-3%);pointer-events:none}
+.opening-background{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;filter:brightness(.74)}
+.opening:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(1,5,12,.12),rgba(1,5,12,.15) 55%,rgba(1,5,12,.45));pointer-events:none}
+.opening-enter{position:absolute;inset:0;z-index:1;width:100%;height:100%;border:0;background:transparent;color:#f7f8fa;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:24px;font-family:var(--sans)}
+.opening-enter:focus-visible{outline:1px solid rgba(255,255,255,.75);outline-offset:-16px}
+.opening-line{font-weight:300;font-size:clamp(15px,3.65vw,54px);line-height:1.3;letter-spacing:-.025em;white-space:nowrap;text-shadow:0 2px 25px rgba(0,0,0,.3)}
+.typing-cursor{display:inline-block;width:1px;height:1em;background:rgba(255,255,255,.8);margin-left:7px;vertical-align:-.08em;animation:cursor-blink 1s steps(1) infinite}
+.opening-hint{position:absolute;bottom:8%;left:0;right:0;color:rgba(233,239,247,.58);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.opening-hint:after{content:"";display:block;width:1px;height:28px;background:linear-gradient(rgba(233,239,247,.5),transparent);margin:16px auto 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes cursor-blink{50%{opacity:0}}
+/* Quiet academic homepage */
+.hero{display:block;max-width:810px;padding:62px 0 50px}.hero h1{font-size:clamp(40px,5.6vw,62px);line-height:1.1;letter-spacing:-.045em;margin:18px 0 20px}.hero h1 em{color:var(--ink)}.lead{font-size:21px;max-width:740px}.intro{max-width:760px}.hero .eyebrow{font-size:10px;letter-spacing:.14em}.hero .actions{margin-top:22px}
+@media(max-width:740px){.hero{padding:45px 0 42px}.hero h1{font-size:47px}.opening-background{object-position:56% center}.opening-hint{font-size:9px;bottom:10%}}
+@media(max-width:460px){.hero h1{font-size:39px}.lead{font-size:19px}.opening-enter{padding:12px}.typing-cursor{margin-left:4px}}
+@media(prefers-reduced-motion:reduce){.opening{transition:opacity .15s linear;transform:none}.typing-cursor{animation:none}}.opening-credit{position:absolute;right:24px;bottom:20px;z-index:2;max-width:440px;text-align:right;color:rgba(235,240,246,.76);font:9px/1.6 var(--sans);letter-spacing:.02em;text-shadow:0 1px 6px #000}
+.opening-credit span{display:block}.opening-credit a{color:rgba(247,250,255,.9);text-decoration:none}.opening-credit>a{display:block;font-size:10px;letter-spacing:.035em;margin-bottom:3px}.opening-credit a:hover{text-decoration:underline}.opening-credit a:focus-visible{outline:1px solid #fff;outline-offset:3px}
+@media(max-width:600px){.opening-credit{right:14px;bottom:13px;max-width:calc(100% - 28px);font-size:8px}.opening-credit>a{font-size:9px}.opening-hint{bottom:18%}}/* Minimal academic profile on the same deep-space photograph */
+:root{--bg:#04070c;--ink:#eef1f6;--muted:#a5aeba;--line:rgba(219,228,240,.17);--green:#b6d9ec;--pale:rgba(180,208,232,.07);--accent:#b6d9ec;--white:transparent;--max:860px}
+body{background:#04070c;color:var(--ink);font-size:15px;line-height:1.8}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(3,7,14,.84),rgba(3,7,14,.88)),url("{{ site.baseurl }}/assets/euclid-deep-field-south.jpg") center/cover no-repeat;pointer-events:none}
+.site-page{position:relative;isolation:isolate}.wrap{width:min(860px,calc(100% - 56px))}.bar{height:78px}.logo,.logo i{color:#e8eef5}.logo{font-weight:600;letter-spacing:.09em}nav{gap:23px;font-size:11px}nav a{color:#aab5c2}nav a:hover{color:white}
+.hero{max-width:none;padding:57px 0 52px}.hero h1,.hero h1 em{color:#f2f4f8;font-size:49px;letter-spacing:-.035em;font-weight:400}.hero h1{margin:13px 0 23px}.hero .eyebrow{color:#9faebe;font-size:9px;font-weight:500;letter-spacing:.16em}.intro{font-size:14px;line-height:1.95;max-width:760px;color:#b6bfcc}.hero a:not(.btn),a{color:#c8dfef}.actions{gap:22px;margin-top:23px}.btn,.btn.main{background:none;border:0;border-bottom:1px solid #687b8c;border-radius:0;padding:0 0 3px;color:#e5edf5;font-size:12px;font-weight:400}.btn:hover{background:none;color:white;border-color:white}
+section{padding-bottom:48px}.head{display:block;padding-bottom:10px;margin-bottom:18px}.head h2{font-size:25px;color:#edf1f7;letter-spacing:-.015em}.head p{display:none}.split,.bottom{display:block}.copy{margin-top:0;font-size:13px;line-height:1.95}.copy p{color:#b0bac7}.cards{display:block;margin-top:16px}.card{display:block;padding:8px 0;border:0}.card b{font:500 13px var(--sans);color:#dce5ee}.card p{display:inline;font:12px/1.8 var(--sans);color:#97a6b7;margin-left:12px}.card p:before{content:"— ";color:#7a8b9e}
+.news article{grid-template-columns:85px 1fr;padding:11px 0;gap:16px}.news p{font-size:12px;color:#afbbc9}time{font-size:9px;font-weight:400;color:#8d9db0}.pub{grid-template-columns:1fr;gap:0;padding:14px 0}.num{display:none}.pub h3{font-size:18px;color:#e0e8f0}.pub p{font-size:11px;color:#9caaba}.pub a{font-size:11px;font-weight:400}.pub .copy p{font-size:12px}.repos{display:block}.repo{padding:10px 0;color:#d5e0eb}.repo b{font:400 13px var(--sans)}.repo small{display:none}.repo i{color:#7e99ad;font-size:13px}.bottom>div+div{margin-top:25px}.bottom h3{font:400 15px var(--serif);color:#d5dfea}.bottom ul{font-size:12px;color:#a8b5c4;line-height:1.9}.contact{background:none;border:0;display:block;padding:0}.contact h2{font-size:25px}.contact p{font-size:12px;color:#9dabbc}.contact .btn{display:inline-block;margin-top:12px}.foot{font-size:10px;gap:12px;flex-wrap:wrap;line-height:1.8;padding-bottom:30px;color:#7f91a5}.site-image-credit{display:block;width:100%;font-size:8px;line-height:1.7;color:#72859a}.site-image-credit a{color:#8fa6bb}
+.opening-line{font-size:clamp(14px,2.9vw,44px)}
+@media(max-width:600px){.wrap{width:calc(100% - 36px)}.bar{height:67px}nav{gap:13px;font-size:10px}.hero{padding:40px 0}.hero h1,.hero h1 em{font-size:38px}.intro{font-size:13px}.card p{display:block;margin-left:0}.card p:before{content:""}.news article{grid-template-columns:68px 1fr;gap:12px}.foot{display:block}.foot>span{display:block;margin-top:7px}}.personal-links{display:flex;flex-wrap:wrap;align-items:center;gap:7px 10px;margin-top:22px;font-size:12px;line-height:1.8}.personal-links a{text-decoration:none;color:#c8dfef}.personal-links a:hover{text-decoration:underline}.personal-links span{color:#667b91}.pub:has(.pub-image){display:grid;grid-template-columns:215px minmax(0,1fr);gap:24px;align-items:center;padding:24px 0}.pub-image{display:block;width:100%;height:auto;max-height:180px;object-fit:contain;background:rgba(255,255,255,.96);border-radius:2px}.pub .pub-body{min-width:0}.pub .pub-authors{font-size:10px;line-height:1.75;color:#99a8ba;margin:6px 0}.pub .pub-venue{color:#d0dce9;font-size:11px}.pub .pub-description{font-size:11px;line-height:1.8;margin:9px 0 0;color:#a5b5c7}.pub-links{display:block;word-spacing:3px;font-size:10px;color:#667b91}.pub-links a{word-spacing:normal;font-size:11px}@media(max-width:650px){.pub:has(.pub-image){grid-template-columns:1fr;gap:15px}.pub-image{max-height:230px;max-width:360px}.personal-links{gap:5px 8px;font-size:11px}}.pub-image{height:150px;max-height:none}@media(max-width:650px){.pub-image{height:200px;max-height:none}}.opening-line{text-transform:uppercase;font-size:clamp(11px,2.45vw,38px);letter-spacing:.025em}</style>
+<script>document.documentElement.classList.add("intro-pending");</script></head>
 <body>
-  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <!--Introduction -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-                Frankie Dong Li
-              </h1>
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Highlighted Text</title>
-                <style>
-                  .highlight {
-                    color: red;
-                    font-weight: bold;
-                  }
-                </style>
-              </head>
-              <body>
-              </body>
-              <p>
-                I am currently a Graduate Student at Macau University of Science and Technology (MUST) and the Institute of Automation, Chinese Academy of Sciences (CASIA), supervised by <a href="https://people.ucas.ac.cn/~longchen">Prof.Long Chen</a> and Prof.Fei-Yue Wang, working on <font color="red"><strong>Space Robotics</strong></font>.
-              </p>
-              <p>
-              I was a Research Assistant from <a href="https://sites.google.com/view/huikonglab/home">The Intelligent Machine Research Lab (IMRL)</a> in the <a href="https://skliotsc.um.edu.mo/"> SKL-IOTSC </a> at <a href="https://www.um.edu.mo/">the University of Macau</a>, supervised by Prof. <a href="https://www.fst.um.edu.mo/people/huikong/">Hui Kong</a>. Before that, I worked as a Research Assistant for one year from June 2022 to June 2023, in the Autonomous and Multi-Agent Systems Research Lab (AMAS-Lab) at <a href="https://eee.sustech.edu.cn/?lang=en">the Department of Electronic and Electrical Engineering</a> of <a href="https://www.sustech.edu.cn/en/">Southern University of Science and Technology (SUSTech)</a>, supervised by Prof. <a href="https://scholar.google.com/citations?user=ic9y2dIAAAAJ&hl=zh-CN&oi=ao">Zhiyun Lin</a>.
-              </p>
-              <p>
-                I received the B. Eng. degree from the <a href="http://ci.hfut.edu.cn/">School of Computer and Information Engineering</a>, <a href="http://www.hfut.edu.cn/">Hefei University of Technology</a> in June 2022. During my undergraduate years, I was a founder of the robotics team at Hefei University of Technology and participated in the <a href="https://www.robomaster.com/en-US">RoboMaster Robotics Competition</a> from 2019 to 2021.
-              </p>
-              <p>
-                When I was studying at <a href="http://www.fyssz.net/">Fuyang No.3 High School</a>, I was sponsored as a Pearl Student by the <a href="https://en.xhef.org/">Xin Hua Education Foundation (XHEF)</a>. I'm truly thankful to them!
+<section class="opening" id="opening" aria-label="Welcome">
+<img class="opening-background" src="{{ site.baseurl }}/assets/euclid-deep-field-south.jpg" alt="" fetchpriority="high">
+<button class="opening-enter" id="enter-site" type="button" aria-label="EXPLORATION FROM EARTH TO SPACE — DONG LI. Enter personal website">
+<span class="opening-line" aria-hidden="true"><span id="opening-typed"></span><span class="typing-cursor"></span></span>
+<span class="opening-hint" aria-hidden="true">Scroll or click to explore</span>
+</button>
+<aside class="opening-credit" aria-label="Image credit">
+<a href="https://www.esa.int/ESA_Multimedia/Images/2025/03/Euclid_Deep_Field_South_16x_zoom" target="_blank" rel="noopener noreferrer">Euclid Deep Field South · ESA ↗</a>
+<span>ESA/Euclid/Euclid Consortium/NASA</span>
+<span>Image processing: J.-C. Cuillandre, E. Bertin, G. Anselmi</span>
+<span><a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0 IGO</a> · Cropped &amp; dimmed for display</span>
+</aside></section>
+<div class="site-page" id="personal-site" tabindex="-1">
+<header class="wrap bar"><a class="logo" href="#top">DONG <i>LI</i></a></header>
+<main class="wrap" id="top">
+<section class="hero"><div><h1>Frankie <em>Dong Li</em></h1><p class="intro">I am a graduate student at Macau University of Science and Technology (MUST) and the Institute of Automation, Chinese Academy of Sciences (CASIA), supervised by <a href="https://people.ucas.ac.cn/~longchen">Prof. Long Chen</a> and Prof. Fei-Yue Wang.</p><div class="personal-links" aria-label="Personal links"><a href="mailto:doongli@ieee.org">Email</a><span aria-hidden="true">/</span><a href="https://github.com/DoongLi">GitHub</a><span aria-hidden="true">/</span><a href="https://scholar.google.com/citations?user=NlsqUHcAAAAJ&amp;hl=en">Google Scholar</a><span aria-hidden="true">/</span><a href="https://www.linkedin.com/in/dong-li-9796b2245/">LinkedIn</a><span aria-hidden="true">/</span><a href="https://dongii.com/doc/dongli_resume.pdf">CV</a><span aria-hidden="true">/</span><a href="https://dongii.com/images/wechat.jpg">WeChat</a></div></div>
+</section>
+
+<section id="research"><div class="head"><h2>Research</h2><p>Methods for robots in the real world</p></div><div class="split"><div class="copy"><p>My research spans foundational methods and applications in robotics and 3D vision. I focus on making robots more capable in unstructured environments, from field settings to space exploration.</p></div><div><div class="cards"><article class="card"><b>Space robotics</b><p>Autonomy, perception, and navigation for planetary exploration.</p></article><article class="card"><b>Field robotics</b><p>Robust systems for complex, changing environments.</p></article><article class="card"><b>SLAM & 3D vision</b><p>Mapping and scene understanding for embodied systems.</p></article><article class="card"><b>Active exploration</b><p>Methods that help robots choose where and how to explore.</p></article></div></div></div></section>
+<section id="news"><div class="head"><h2>Latest news</h2><p>Updates from research and community</p></div><div class="news">
+<article><time>SEP 2026</time><p>Two co-authored papers, BEAKER and <a href="https://arxiv.org/pdf/2605.03749">FluxFlow</a>, were accepted by NeurIPS 2026.</p></article>
+<article><time>SEP 2026</time><p>OpenSpaceLab won first place in the Single-Robot Public Track and third place in the Single- and Multi-Robot Private Tracks at the <a href="https://frostlab.byu.edu/IIG-workshop/">IROS 2026 Autonomous Exploration Challenge</a>.</p></article>
+<article><time>AUG 2026</time><p><a href="https://arxiv.org/pdf/2606.28746">He3-Seeker</a> and <a href="https://github.com/OpenSpace-Lab/OS-Rover">OS-Rover</a> were accepted by iSpaRo 2026.</p></article>
+<article><time>JUN 2026</time><p><a href="https://arxiv.org/pdf/2606.27807">SpikeVLA</a> and <a href="https://arxiv.org/pdf/2605.03749">Denoising the Deep Sky</a> were accepted by ICML 2026 and ECCV 2026.</p></article>
+<article><time>JAN 2026</time><p>We are organizing the IROS 2026 special session <a href="https://openspace-lab.github.io/SpaceRobotics-IROS26/">“Robotics in Space Exploration.”</a></p></article></div><details><summary>Show earlier updates</summary><div class="news"><article><time>DEC 2025</time><p>GauSem-SLAM was accepted by ICRA 2026. A survey on 3D scene representation is available on <a href="https://arxiv.org/pdf/2512.03422">arXiv</a>.</p></article><article><time>SEP 2025</time><p><a href="https://ieeexplore.ieee.org/document/11164563">GaussR-SLAM</a> was accepted by RA-L.</p></article><article><time>JUN 2025</time><p>TWC-SLAM and STG-Avatar were accepted by IROS 2025.</p></article></div></details></section>
+<section id="publications">
+<div class="head"><h2>Selected work</h2><p>Research and projects</p></div>
+<div class="pubs">
+{% for post in site.categories.research %}
+{% unless post.title == 'What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models' or post.title == 'Wild3A: Novel View Synthesis from Any Dynamic Images in Seconds' or post.title == 'SLAM-X: Generalizable Dynamic Removal for NeRF and Gaussian Splatting SLAM' or post.title == 'GARAD-SLAM: 3D GAussian splatting for Real-time Anti Dynamic SLAM' or post.title == 'UMAD: University of Macau Anomaly Detection Benchmark Dataset' %}
+<article class="pub">{% if post.image %}<img class="pub-image" src="{{ post.image | relative_url }}" alt="Visualization for {{ post.title | escape }}" loading="lazy">{% endif %}<div class="pub-body">
+<h3>{{ post.title }}</h3><p>{{ post.authors }}</p><p><em>{{ post.venue }}</em>{% if post.date %} · {{ post.date | date: "%Y" }}{% endif %}</p>
+<div class="pub-links">
+{% if post.paper %}<a href="{{ post.paper }}">Paper ↗</a>{% endif %}
+{% if post.arxiv %}<a href="{{ post.arxiv }}">arXiv ↗</a>{% endif %}
+{% if post.video %}<a href="{{ post.video }}">Video ↗</a>{% endif %}
+{% if post.code %}<a href="{{ post.code }}">Code ↗</a>{% endif %}
+{% if post.poster %}<a href="{{ post.poster }}">Poster ↗</a>{% endif %}
+{% if post.website %}<a href="{{ post.website }}">Project ↗</a>{% endif %}
+{% if post.slides %}<a href="{{ post.slides }}">Slides ↗</a>{% endif %}
+{% if post.comments %}<a href="{{ post.comments }}">Reviews ↗</a>{% endif %}
+{% if post.post %}<a href="{{ post.post }}">中文解读 ↗</a>{% endif %}
+</div><div class="copy">{{ post.excerpt }}</div>
+</div></article>
+{% endunless %}
+{% endfor %}
+</div></section>
 
 
-              </p>
-              
-              <p style="text-align:center">
-                <a target="_blank" href="mailto:doongli@ieee.org"> Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/DoongLi">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=NlsqUHcAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/dong-li-9796b2245/"> LinkedIn </a> &nbsp;/&nbsp;
-                <a href="doc/dongli_resume.pdf"> CV </a> &nbsp;/&nbsp;
-                <a href="images/wechat.jpg"> WeChat </a> 
-                
-              </p>
-            </td>
-            <td style="padding:2.5%;width:30%;max-width:30%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/DONGLI20260610.png">
-            </td>
-          </tr>
-        </table>
-        
-        <!-- Research -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
-              <p>
-                I have broad interests in foundational methods and applications in robotics and 3D vision. Specifically, my current research focuses on <strong>Field Robotics</strong> and <strong>Space Robotics</strong>.
-                Feel free to reach out to discuss ideas or collaborations~ 
-              </p>
-              <p>
-                As an active contributor to the robotics and 3D vision communities, I maintain several popular curated repositories (awesome lists and paper collections):
-              </p>
+<section id="service"><div class="head"><h2>Honors & service</h2><p>Contributing to the robotics community</p></div><div class="bottom"><div><h3>Selected honors</h3><ul><li><b>3rd place</b> — Single- and Multi-Robot Private Tracks, IROS 2026 Challenge</li><li><b>IEEE RAS IROS Travel Grant</b>, 2024</li></ul></div><div><h3>Academic service</h3><ul><li>Organizer, IROS 2026 Special Session on Robotics for Space Exploration</li><li>Reviewer for ICRA, IROS, iSpaRo, ROMAN, and DTPI</li><li>Reviewer for IJRR, IEEE T-RO, RA-L, TASE, ISPRS JPRS, Pattern Recognition, and other journals</li><li>Student Abstract and Poster Program Committee, AAAI-26</li></ul></div></div></section>
 
-              <ul>
-                <li>
-                <a href="https://github.com/3D-Vision-World/awesome-NeRF-and-3DGS-SLAM">
-                  <img src="https://img.shields.io/github/stars/3D-Vision-World/awesome-NeRF-and-3DGS-SLAM?style=social" alt="Stars">
-                </a> — NeRF, 3D Gaussian Splatting, and implicit representations in SLAM/robotics
-              </li>
-              <li>
-                <a href="https://github.com/Active-SLAM/Active-SLAM-Paper-List">
-                  <img src="https://img.shields.io/github/stars/Active-SLAM/Active-SLAM-Paper-List?style=social" alt="Stars">
-                </a> — Papers and resources on Active SLAM & robotic exploration
-              </li>
-              <li>
-                <a href="https://github.com/DoongLi/Awesome-Scene-Change-Detection">
-                  <img src="https://img.shields.io/github/stars/DoongLi/Awesome-Scene-Change-Detection?style=social" alt="Stars">
-                </a> — Scene change detection papers, codes, and resources
-              </li>
-              <li>
-                <a href="https://github.com/DoongLi/awesome-homography-estimation-and-image-alignment">
-                  <img src="https://img.shields.io/github/stars/DoongLi/awesome-homography-estimation-and-image-alignment?style=social" alt="Stars">
-                </a> — Homography estimation and image alignment resources
-              </li>
-              <li>
-                <a href="https://github.com/3D-Vision-World/All-3R-SLAM-in-this-Repo">
-                  <img src="https://img.shields.io/github/stars/3D-Vision-World/All-3R-SLAM-in-this-Repo?style=social" alt="Stars">
-                </a> — 3D Geometric Foundation Models and SLAM applications
-              </li>
-              <li>
-                <a href="https://github.com/DoongLi/ICRA2025-Paper-List">
-                  <img src="https://img.shields.io/github/stars/DoongLi/ICRA2025-Paper-List?style=social" alt="Stars">
-                </a> — Complete ICRA 2025 papers with sessions & abstracts
-              </li>
-              <li>
-                <a href="https://github.com/DoongLi/IROS2025-Paper-List">
-                  <img src="https://img.shields.io/github/stars/DoongLi/IROS2025-Paper-List?style=social" alt="Stars">
-                </a> — Comprehensive IROS 2025 papers with sessions
-              </li>
-            </ul>
-            <p>Feel free to star, fork, or contribute — collaborations are always welcome! 🚀</p>        
-            </td>
-          </tr>
-        </table>
-
-        
-<!-- Personal News -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>News</h2>
-              <!-- 限制最大高度并允许垂直滚动 -->
-              <div style="max-height: 200px; overflow-y: auto; padding-right: 10px;">
-                <p>
-                  [Sep 2026]&nbsp;&nbsp; Two co-authored papers, BEAKER and <a href="https://arxiv.org/pdf/2605.03749">FluxFlow</a>, were accepted by <b>NeurIPS 2026</b>.
-                </p>
-                <p>
-                  [Sep 2026]&nbsp;&nbsp; Our OpenSpaceLab won <b>1st place</b> (Single-Robot Public Track) and <b>3rd place</b> (Single- & Multi-Robot Private Tracks) in the <a href="https://frostlab.byu.edu/IIG-workshop/">IROS 2026 Autonomous Exploration Challenge</a>! More details can be found on <a href="https://github.com/OpenSpace-Lab/Indoor-Exploration-IROS2026">GitHub</a>.
-                </p>
-                <p>   
-                  [Aug 2026]&nbsp;&nbsp; Two papers <a href="https://arxiv.org/pdf/2606.28746">He3-Seeker</a> and <a href="https://github.com/OpenSpace-Lab/OS-Rover">OS-Rover</a> have been accepted by <a href="https://www.isairas-isparo.de/">iSpaRo 2026</a>. See you in Cologne this November!
-                </p>
-                <p>   
-                  [Jun 2026]&nbsp;&nbsp; The co-author work <a href="https://arxiv.org/pdf/2606.27807">SpikeVLA</a> and <a href="https://arxiv.org/pdf/2605.03749">Denoising the Deep Sky</a>  have been accepted by <a href="https://icml.cc/">ICML 2026</a> and <a href="https://eccv.ecva.net/Conferences/2026">ECCV 2026</a> respectively.
-                </p>
-                <p>   
-                  [Jun 2026]&nbsp;&nbsp; Invited as a reviewer for <a href="https://www.ieee-ras.org/publications/t-ro/">IEEE Transactions on Robotics (T-RO)</a>.
-                </p>
-                <p>   
-                  [Jun 2026]&nbsp;&nbsp; Attending <a href="https://2026.ieee-icra.org/">ICRA 2026 (Vienna)</a>. Looking to connect on <strong>Space Robotics, Field Robotics, SLAM, and Autonomous Exploration</strong>.
-                </p>
-                <p>   
-                  [May 2026]&nbsp;&nbsp; Invited to review 2 manuscripts for <a href="https://journals.sagepub.com/home/ijr">The International Journal of Robotics Research (IJRR)</a>.
-                </p>
-                <p>   
-                  [Apr 2026]&nbsp;&nbsp; 我们合作的综述论文 <a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260100/">机器人灵巧手：迈向通用操作的关键技术</a> 被中国图形图形学报接收.
-                </p>
-                 <p>
-                  [Jan 2026]&nbsp;&nbsp; <strong>We are organizing the Special Session “Robotics in Space Exploration” at IROS 2026. More information can be found <a href="https://openspace-lab.github.io/SpaceRobotics-IROS26/">here</a></strong>.
-                </p>
-                <p>
-                  [Dec 2025]&nbsp;&nbsp; GauSem-SLAM has been accepted by <a href="https://2026.ieee-icra.org/">ICRA 2026</a>. See you in Vienna!.
-                </p>
-                <p>
-                  [Dec 2025]&nbsp;&nbsp; Our survey on 3D Scene Representation is available on <a href="https://arxiv.org/pdf/2512.03422">arXiv</a>, and Chinese introduction available for <a href="https://mp.weixin.qq.com/s/vBNr9hGz9mEH9cprGLm_GQ">机器之心</a>.
-                </p>
-                <p>
-                  [Oct 2025]&nbsp;&nbsp;I will travel to Hangzhou, China to attend <a href="https://www.iros25.org/">IROS 2025</a>.
-                </p>
-                <p>
-                  [Sep 2025]&nbsp;&nbsp;The co-author work <a href="https://ieeexplore.ieee.org/document/11164563">GaussR-SLAM</a> has been accepted by <strong>RAL</strong>~
-                </p>
-                <p>
-                  [Jul 2025]&nbsp;&nbsp;<strong>SLAM-X</strong> and <strong>Wild3A</strong> have been accepted by <a href="https://acmmm2025.org/">ACM MM 2025</a>!
-                </p>
-                <p>
-                  [Jun 2025]&nbsp;&nbsp;TWC-SLAM and STG-Avatar have been accepted by <a href="https://www.iros25.org/">IROS 2025</a>~
-                </p>
-                <p>
-                  [Jan 2025]&nbsp;&nbsp;The co-author work <strong><a href="https://arxiv.org/pdf/2502.03228">GARAD-SLAM</a></strong> has been accepted by <a href="https://2025.ieee-icra.org/">ICRA 2025</a>.
-                </p>
-                <p>
-                  [Nov 2024]&nbsp;&nbsp;The star count of our <a href="https://github.com/DoongLi/awesome-Implicit-NeRF-SLAM">awesome-Implicit-NeRF-SLAM</a> repository has reached 1K！
-                </p>
-                <p>
-                  [Oct 2024]&nbsp;&nbsp;I have received the <strong>RAS travel grant</strong> and will travel to Abu Dhabi, UAE to attend <a href="http://iros2024-abudhabi.org/">IROS 2024</a>.
-                </p>
-                <p>
-                  [Jun 2024]&nbsp;&nbsp;<strong><a href="https://arxiv.org/pdf/2408.12527">UMAD</a></strong> has been accepted by <a href="http://iros2024-abudhabi.org/">IROS 2024</a>! Thanks to everyone who participated in this project!
-                </p>
-              </div>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Selected Publications-->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Selected Publications</h2>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
-          <tr>
-            <!-- change the teaser image size here -->
-            <td style="padding:0.5%;width:30%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:70%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
-
-              <br>
-              <!--<em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}-->
-              <em>{{post.venue}}</em>
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.comments %}
-              <a href="{{post.comments}}">review comments</a> /
-              {% endif %}
-              {% if post.rap %}
-              <a href="{{post.rap}}">RA-P editorial rejection comments</a> /
-              {% endif %}
-              {% if post.coverletter %}
-              <a href="{{post.coverletter}}">review comments and cover letter</a> /
-              {% endif %}
-              {% if post.post %}
-              <a href="{{post.post}}">机器之心中文解读</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-
-
-        
-        <!-- Projects-->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Projects</h2>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'project' %}
-          <tr>
-            <!-- change the teaser image size here -->
-            <td style="padding:0.5%;width:30%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:70%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
+</main>
+<footer class="wrap foot"><span class="site-image-credit">Background: <a href="https://www.esa.int/ESA_Multimedia/Images/2025/03/Euclid_Deep_Field_South_16x_zoom" target="_blank" rel="noopener noreferrer">Euclid Deep Field South</a> · ESA/Euclid/Euclid Consortium/NASA · Image processing: J.-C. Cuillandre, E. Bertin, G. Anselmi · <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0 IGO</a> · Cropped &amp; dimmed for display.</span></footer>
+</div>
+<script>
+(() => {
+  const root = document.documentElement;
+  const opening = document.getElementById('opening');
+  const page = document.getElementById('personal-site');
+  const typed = document.getElementById('opening-typed');
+  const sentence = 'EXPLORATION FROM EARTH TO SPACE — DONG LI';
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let entered = false, timer, count = 0, wheelDistance = 0, touchStart = null;
+  page.inert = true;
+  const typeNext = () => {
+    if (entered) return;
+    typed.textContent = sentence.slice(0, ++count);
+    if (count < sentence.length) timer = window.setTimeout(typeNext, 58);
+  };
+  if (reducedMotion) typed.textContent = sentence;
+  else timer = window.setTimeout(typeNext, 420);
+  function enter() {
+    if (entered) return;
+    entered = true;
+    window.clearTimeout(timer);
+    typed.textContent = sentence;
+    page.inert = false;
+    root.classList.remove('intro-pending');
+    opening.style.display = 'block';
+    opening.classList.add('entering');
+    window.scrollTo({top:0, behavior:'instant'});
+    window.removeEventListener('wheel', onWheel);
+    window.removeEventListener('touchstart', onTouchStart);
+    window.removeEventListener('touchmove', onTouchMove);
+    window.removeEventListener('keydown', onKey);
+    window.setTimeout(() => { opening.remove(); page.focus({preventScroll:true}); }, reducedMotion ? 160 : 860);
+  }
+  function onWheel(event) {
+    if (entered) return;
+    event.preventDefault();
+    wheelDistance += Math.abs(event.deltaY);
+    if (wheelDistance > 24) enter();
+  }
+  function onTouchStart(event) { touchStart = event.touches[0].clientY; }
+  function onTouchMove(event) {
+    if (entered || touchStart === null) return;
+    if (Math.abs(event.touches[0].clientY - touchStart) > 24) { event.preventDefault(); enter(); }
+  }
+  function onKey(event) {
+    if (['Enter',' ','ArrowDown','PageDown','Escape'].includes(event.key)) { event.preventDefault(); enter(); }
+  }
+  document.getElementById('enter-site').addEventListener('click', enter);
+  window.addEventListener('wheel', onWheel, {passive:false});
+  window.addEventListener('touchstart', onTouchStart, {passive:true});
+  window.addEventListener('touchmove', onTouchMove, {passive:false});
+  window.addEventListener('keydown', onKey);
+})();
+</script>
+</body></html>
 
 
 
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">Document</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Intel Projects</h2>
-              <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'Intel' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
 
-              <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Other Projects</h2>
-              <p> These include coursework, side projects and unpublished research work. 
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat != 'research' and cat != 'Intel' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
 
-              <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table> -->
-        <!-- Honors & Awards -->
-<!-- Honors & Awards -->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tr>
-    <td style="padding:2.5%;width:100%;vertical-align:middle">
-      <h2>Honors & Awards</h2>
 
-      <h3>Research Awards</h3>
-      <ul>
-        <li>
-          <strong>1st Place - Single-Robot Public Track & 3rd Place - Single- & Multi-Robot Private Tracks IROS Autonomous Indoor Exploration Challenge, 2026</strong>
-        </li>
-        <li>
-          <strong>IEEE RAS IROS Travel Grant, 2024</strong>
-        </li>
-      </ul>
 
-      <h3>Undergraduate Awards</h3>
-      <ul>
-        <li><strong>Third Prize</strong> | International Underwater Robot Competition, 2020</li>
-        <li><strong>First Prize</strong> | National Undergraduate Electronics Design Contest in Anhui Province, 2020</li>
-        <li><strong>Second Prize</strong> | RoboMaster Robotics Competition, 2020</li>
-        <li><strong>Third Prize</strong> | National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2020</li>
-        <li><strong>Individual Scholarship</strong> | Hefei University of Technology, 2019, 2020, 2021</li>
-      </ul>
-    </td>
-  </tr>
-</table>
 
-<!-- Services -->
-<table style="width:100%; border:0; border-spacing:0; border-collapse:separate; margin: 0 auto;">
-  <tr>
-    <td style="padding:2.5%; width:100%; vertical-align:middle">
-      <h2>Services</h2>
-      <ul>
-      <h3>Conference Services</h3>
-      <ul>
-        <li><i>Organizers of the <a href="https://openspace-lab.github.io/SpaceRobotics-IROS26/">IROS 2026 Special Session on Robotics for Space Exploration</a></i></li>
-        <li><i>AAAI-26 Student Abstract and Poster Program Committee Member
-      </ul>
-      <h3>Conference Reviewers</h3>
-      <ul>
-        <li><i>IEEE International Conference on Robotics and Automation (ICRA) </i>2027 * 4, </i>2026 * 3, 2025 * 2</li>
-        <li><i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) </i>2026 * 4, 2025 * 2</li>
-        <li><i>IEEE International Conference on Space Robotics (iSpaRo) 2026</i> * 1</li>
-        <li><i>IEEE International Conference on Robot and Human Interactive Communication (ROMAN) 2025</i> * 1</li>
-        <li><i>IEEE International Conference on Digital Twins and Parallel Intelligence (DTPI) 2026</i> * 2</li>
-      </ul>
-      <h3>Journal Reviewers</h3>
-      <ul>
-        <li><i>International Journal of Robotics Research (IJRR)</i> * 2</li>
-        <li><i>IEEE Transactions on Robotics (T-RO)</i> * 1</li>
-        <li><i>IEEE Robotics and Automation Magazine (RA-M)</i> * 1</li>
-        <li><i>Robotics and Autonomous Systems (RAS)</i> * 1</li>
-        <li><i>IEEE Transactions on Automation Science and Engineering (TASE)</i> * 5</li>
-        <li><i>IEEE Robotics and Automation Letters (RAL)</i> * 4</li>
-        <li><i>IEEE Robotics and Automation Practice (RA-P)</i> * 1</li>
-        <li><i>ISPRS Journal of Photogrammetry and Remote Sensing (ISPRS)</i> * 2</li>
-        <li><i>Computer Vision and Image Understanding (CVIU)</i> * 1</li>
-        <li><i>Engineering Applications of Artificial Intelligence (EAAI)</i> * 1</li>
-        <li><i>Pattern Recognition (PR)</i> * 1</li>
-        <li><i>Neurocomputing</i> * 1</li>
-        <li><i>IEEE Sensors Journal</i> * 1</li>
-        <li><i>Scientific Reports</i> * 1</li>
-        <li><i>Applied Soft Computing Journal</i> * 1</li>
-        <li><i>Unmanned Systems (US)</i> * 1</li>
-      </ul>
-    </td>
-  </tr>
-</table>
 
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a href="https://leonidk.com/">Leonid Keselman's</a> <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
 
-</html>
 
